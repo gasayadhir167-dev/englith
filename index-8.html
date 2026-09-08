@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="theme-color" content="#0E1317">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="对位英语">
+<meta name="application-name" content="对位英语">
+<meta name="format-detection" content="telephone=no">
+<title>ENGINEER ENGLISH</title>
+<style>
+:root{
+  --bg:#0E1317;
+  --bg-2:#151C22;
+  --line:#232C34;
+  --ink:#E9E6DF;
+  --ink-2:#8794A0;
+  --ink-3:#57646F;
+  --brass:#D8B45C;
+  --jade:#5FBFA0;
+  --rust:#C2604B;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono","Roboto Mono",Menlo,Consolas,"Courier New",monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{touch-action:manipulation;user-select:none;-webkit-user-select:none}
+input,textarea{user-select:text;-webkit-user-select:text}
+.en,.lit,.nat,.mine,.eg{user-select:text;-webkit-user-select:text}
+html{height:100%}
+body{
+  margin:0;min-height:100%;overflow-x:hidden;
+  background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overscroll-behavior:none;
+}
+button{font:inherit;color:inherit;background:none;border:none;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+.app{
+  min-height:100dvh;display:flex;flex-direction:column;
+  max-width:600px;margin:0 auto;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+.screen{display:none;flex:1;flex-direction:column;min-height:0}
+.screen.on{display:flex}
+
+/* ============ 首页 ============ */
+.home{flex:1;display:flex;flex-direction:column;padding:0 26px 30px}
+.title{
+  margin:7vh 0 0;font-family:var(--mono);font-size:13px;
+  letter-spacing:.36em;color:var(--ink-3);
+}
+.stats{margin-top:auto;display:flex;flex-direction:column}
+.stat{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:20px 0;border-bottom:1px solid var(--line);width:100%;text-align:left;
+}
+.stat:first-child{border-top:1px solid var(--line)}
+.stat .k{color:var(--ink-2);font-size:14.5px;letter-spacing:.02em}
+.stat .v{font-family:var(--mono);font-size:30px;color:var(--ink);letter-spacing:-.01em}
+.stat .v small{font-size:15px;color:var(--ink-3)}
+.stat .v.lock{font-size:15px;color:var(--ink-3);letter-spacing:.02em}
+.stat .v.open{font-size:15px;color:var(--brass);letter-spacing:.02em}
+
+.start{
+  margin-top:34px;height:56px;width:100%;border-radius:13px;
+  background:var(--brass);color:#181206;font-weight:600;letter-spacing:.14em;
+  display:flex;align-items:center;justify-content:center;transition:opacity .15s;
+}
+.start:active{opacity:.82}
+
+.prefs{margin-top:30px;display:flex;flex-direction:column;gap:16px}
+.pref{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.pref .lab{color:var(--ink-3);font-size:13px;letter-spacing:.02em;white-space:nowrap}
+.pick{display:flex;gap:8px}
+.pick button{
+  min-width:52px;height:34px;border-radius:9px;border:1px solid var(--line);
+  color:var(--ink-3);font-family:var(--mono);font-size:13px;
+}
+.pick button.sel{border-color:var(--brass);color:var(--brass)}
+
+/* ============ 顶栏 ============ */
+.bar{display:flex;align-items:center;gap:12px;padding:14px 22px 10px;min-height:50px}
+.bar .back{color:var(--ink-2);font-size:15px}
+.bar .mid{flex:1;text-align:center;color:var(--ink-3);font-size:12.5px;letter-spacing:.12em;font-family:var(--mono)}
+.bar .right{min-width:58px;text-align:right;font-family:var(--mono);font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.bar .right.hot{color:var(--brass)}
+.rail{height:2px;background:var(--line);margin:0 22px;border-radius:2px;overflow:hidden}
+.rail i{display:block;height:100%;width:0;background:var(--brass);transition:width .3s ease}
+
+/* ============ 铭牌 ============ */
+.stage{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:12px 22px;overflow-y:auto}
+.zh{text-align:center;font-size:29px;font-weight:600;letter-spacing:.05em;line-height:1.35}
+.ipa{text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:8px;letter-spacing:.02em}
+
+.plate{
+  margin:32px auto 0;width:fit-content;max-width:100%;
+  font-family:var(--mono);font-size:var(--cw,30px);letter-spacing:var(--ls);
+  padding:0 1.5ch;
+}
+.row,.ghost,#keys{
+  font-family:inherit;font-size:inherit;letter-spacing:inherit;
+  line-height:1.5;white-space:pre;
+}
+.answer{padding-right:3ch}
+.answer .cell{color:var(--brass);transition:color .15s ease}
+.answer .cell.miss{color:var(--rust)}
+.typedwrap{position:relative;margin-top:3px}
+.ghost{position:absolute;left:0;top:0;pointer-events:none}
+.ghost .cell{color:var(--ink);border-bottom:1.5px solid var(--line);transition:color .15s ease,border-color .15s ease}
+.ghost .cell.miss,.ghost .cell.extra{color:var(--rust);border-bottom-color:var(--rust)}
+.ghost .cell.slot{color:var(--ink-3);opacity:.3}
+.ok .ghost .cell{color:var(--jade);border-bottom-color:var(--jade)}
+.ok .answer .cell{color:var(--jade)}
+.ok .plate{animation:lift .2s ease-out}
+@keyframes lift{from{opacity:.5}to{opacity:1}}
+#keys{
+  display:block;width:100%;margin:0;padding:0;border:0;background:transparent;
+  color:transparent;caret-color:var(--brass);outline:none;border-radius:0;
+  -webkit-text-fill-color:transparent;
+}
+#keys::selection{background:rgba(216,180,92,.3)}
+
+.hint{min-height:20px;text-align:center;margin-top:24px;font-size:13.5px;color:var(--ink-3)}
+.hint.warn{color:var(--rust)}
+.hint.good{color:var(--jade)}
+.eg{
+  margin:14px auto 0;max-width:34em;text-align:center;
+  font-family:var(--mono);font-size:12.5px;line-height:1.7;color:var(--ink-3);opacity:.72;
+}
+.acts{padding:0 22px 26px}
+.btn{
+  width:100%;height:54px;border-radius:13px;background:var(--brass);color:#181206;
+  font-weight:600;letter-spacing:.1em;display:flex;align-items:center;justify-content:center;
+  transition:opacity .15s;
+}
+.btn:active{opacity:.82}
+.btn.quiet{background:transparent;border:1px solid var(--line);color:var(--ink-2);font-weight:400;letter-spacing:.04em}
+
+/* 语音按钮 */
+.sayrow{display:flex;justify-content:center;margin-top:16px;min-height:34px}
+.say{
+  display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 16px;
+  border:1px solid var(--brass);border-radius:17px;color:var(--brass);
+  font-size:13px;letter-spacing:.06em;
+}
+.say[hidden]{display:none}
+.say.locked{border-color:var(--line);color:var(--ink-3)}
+.say:active{background:rgba(216,180,92,.12)}
+.say svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.say svg path:first-child{fill:currentColor;stroke:none}
+
+
+/* ============ 词库 ============ */
+.lib{flex:1;min-height:0;overflow-y:auto;padding:6px 24px 0}
+.bank{
+  width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;
+  gap:14px;padding:18px 0;border-bottom:1px solid var(--line);
+}
+.bank .nm{font-size:17px}
+.bank .nm i{display:block;font-style:normal;font-size:12px;color:var(--ink-3);margin-top:4px}
+.bank .num{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);text-align:right;line-height:1.7;white-space:nowrap}
+.bank.cur .nm{color:var(--brass)}
+.bank.cur .num em{font-style:normal;color:var(--brass)}
+.libfoot{padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px}
+.libfoot .btn{height:48px}
+.tip{margin:4px 0 0;font-size:12px;line-height:1.8;color:var(--ink-3)}
+.tip span{font-family:var(--mono);color:var(--ink-2)}
+.impsum{padding:18px 0 16px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.9}
+.impsum b{font-family:var(--mono);font-weight:400;color:var(--brass);font-size:22px}
+.impsum i{font-style:normal;color:var(--ink-3);font-size:13px;display:block;margin-top:6px}
+.imptable{padding:12px 0 0;font-size:14.5px}
+.improw{display:flex;gap:16px;padding:7px 0;border-bottom:1px solid rgba(35,44,52,.5)}
+.improw .w{font-family:var(--mono);color:var(--ink);min-width:11em}
+.improw .m{color:var(--ink-2);flex:1}
+.improw.dup .w{color:var(--ink-3)}
+.improw.dup .m:after{content:"　已有";color:var(--brass);font-size:12px}
+
+/* ============ 句子 ============ */
+.sent{flex:1;min-height:0;overflow-y:auto;padding:10px 24px 0}
+.en{font-family:var(--mono);font-size:21px;line-height:1.6;margin-top:3vh}
+.lit{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:17px;line-height:2.05;color:var(--brass)}
+.lit b{font-weight:400;padding-right:.35em}
+.ask{margin-top:26px;font-size:14px;color:var(--ink-2)}
+textarea{
+  margin-top:10px;width:100%;min-height:100px;resize:none;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:12px;
+  padding:14px 15px;color:var(--ink);font-family:inherit;font-size:16.5px;line-height:1.7;
+}
+textarea:focus{outline:none;border-color:var(--brass)}
+textarea::placeholder{color:var(--ink-3)}
+.reveal{display:none;margin-top:24px}
+.reveal.on{display:block}
+.blk{padding-top:18px;border-top:1px solid var(--line)}
+.blk .k{font-size:12px;color:var(--ink-3);letter-spacing:.14em;font-family:var(--mono)}
+.blk .mine{margin-top:8px;font-size:16.5px;line-height:1.75;color:var(--ink-2)}
+.blk .nat{margin-top:8px;font-size:19px;line-height:1.75;color:var(--jade)}
+.judge{display:flex;gap:12px;padding:22px 24px 26px}
+.judge button{flex:1;height:50px;border-radius:12px;border:1px solid var(--line);color:var(--ink-2);font-size:14.5px}
+.judge button.yes{border-color:var(--jade);color:var(--jade)}
+
+/* ============ 结束页 ============ */
+.done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:0 34px;text-align:center}
+.done h2{margin:0;font-size:21px;font-weight:600}
+.done p{margin:0;color:var(--ink-2);font-size:14.5px}
+.done .btn{max-width:240px;margin-top:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- 首页 -->
+  <section class="screen on" id="s-home">
+    <div class="home">
+      <div class="title">ENGINEER ENGLISH</div>
+      <div class="stats">
+        <div class="stat"><span class="k">今日学习</span><span class="v" id="hToday">0<small> / 30</small></span></div>
+        <div class="stat"><span class="k">已解锁语音</span><span class="v" id="hMastered">0</span></div>
+        <button class="stat" id="hBankRow"><span class="k">当前词库</span><span class="v open" id="hBank">现场工程词</span></button>
+        <button class="stat" id="hSent"><span class="k">句子训练</span><span class="v open" id="hSentV">0 / 24</span></button>
+      </div>
+      <button class="start" id="hStart">开始学习</button>
+      <div class="prefs">
+        <div class="pref">
+          <span class="lab">声音</span>
+          <div class="pick" id="pickSound"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 单词 -->
+  <section class="screen" id="s-word">
+    <div class="bar">
+      <button class="back" data-home>返回</button>
+      <div class="mid" id="wProgress"></div>
+      <div class="right" id="wStreak"></div>
+    </div>
+    <div class="rail"><i id="wRail"></i></div>
+    <div class="stage" id="wStage">
+      <div class="zh" id="wZh"></div>
+      <div class="ipa" id="wIpa"></div>
+      <div class="sayrow"><button class="say" id="wSay">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg><span id="wSayT">朗读</span></button></div>
+      <div class="plate" id="wPlate">
+        <div class="row answer" id="wAnswer"></div>
+        <div class="typedwrap">
+          <div class="ghost" id="wTyped" aria-hidden="true"></div>
+          <input id="keys" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="text" enterkeyhint="done" aria-label="拼写输入">
+        </div>
+      </div>
+      <div class="hint" id="wHint"></div>
+      <div class="eg" id="wEg"></div>
+    </div>
+    <div class="acts"><button class="btn" id="wConfirm">确认</button></div>
+  </section>
+
+  <!-- 词库 -->
+  <section class="screen" id="s-lib">
+    <div class="bar">
+      <button class="back" data-home>返回</button>
+      <div class="mid">WORD BANKS</div>
+      <div class="right"></div>
+    </div>
+    <div class="lib" id="libList"></div>
+    <div class="libfoot">
+      <button class="btn quiet" id="btnImport">导入词库</button>
+      <button class="btn quiet" id="btnExport">导出我的词库</button>
+      <input type="file" id="fileIn" accept=".csv,.txt,text/csv,text/plain" style="display:none">
+      <p class="tip">CSV 表头 word,meaning,phonetic,example（或 英文,中文,音标,例句）；也支持每行 <span>equipment|设备</span> 的 TXT。导出的文件含学习记录，换手机时再导入即可恢复。</p>
+    </div>
+  </section>
+
+  <!-- 导入预览 -->
+  <section class="screen" id="s-import">
+    <div class="bar">
+      <button class="back" id="impCancel">取消</button>
+      <div class="mid">IMPORT</div>
+      <div class="right"></div>
+    </div>
+    <div class="lib">
+      <div class="impsum" id="impSum"></div>
+      <div class="imptable" id="impTable"></div>
+    </div>
+    <div class="libfoot">
+      <button class="btn" id="impAppend">追加到我的词库</button>
+      <button class="btn quiet" id="impReplace">替换这个词库</button>
+    </div>
+  </section>
+
+  <!-- 句子理解 -->
+  <section class="screen" id="s-sent">
+    <div class="bar">
+      <button class="back" data-home>返回</button>
+      <div class="mid" id="sProgress"></div>
+      <div class="right" id="sCount"></div>
+    </div>
+    <div class="rail"><i id="sRail"></i></div>
+    <div class="sent" id="sBody">
+      <div class="en" id="sEn"></div>
+      <div class="sayrow" style="justify-content:flex-start;gap:10px">
+        <button class="say" id="sSay">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg><span id="sSayT">朗读</span></button>
+      </div>
+      <div class="lit" id="sLit"></div>
+      <div class="ask">你认为这句话是什么意思？</div>
+      <textarea id="sInput" rows="3" placeholder="用自己的话写下来"></textarea>
+      <div class="reveal" id="sReveal">
+        <div class="blk"><div class="k">你的理解</div><div class="mine" id="sMine"></div></div>
+        <div class="blk" style="margin-top:20px"><div class="k">自然翻译</div><div class="nat" id="sNat"></div></div>
+      </div>
+      <div style="height:24px"></div>
+    </div>
+    <div class="acts" id="sActs"><button class="btn" id="sSubmit">提交理解</button></div>
+    <div class="judge" id="sJudge" style="display:none">
+      <button id="sMiss">还差点意思</button>
+      <button class="yes" id="sHit">理解对了</button>
+    </div>
+  </section>
+
+  <!-- 结束 -->
+  <section class="screen" id="s-done">
+    <div class="bar"><button class="back" data-home>返回</button><div class="mid"></div><div class="right"></div></div>
+    <div class="done">
+      <h2 id="dTitle"></h2>
+      <p id="dText"></p>
+      <button class="btn" data-home>回到首页</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+"use strict";
+/* =========================================================
+   DATA — 90 个现场工程词，难度递进
+   ========================================================= */
+const WORDS = [
+["part","部件","/pɑːrt/","This part is broken."],
+["test","测试","/test/","We will test the machine now."],
+["site","现场","/saɪt/","Our engineer is on site."],
+["tube","球管","/tuːb/","The X-ray tube is very hot."],
+["coil","线圈","/kɔɪl/","The coil was damaged."],
+["unit","单元","/ˈjuːnɪt/","This unit needs service."],
+["fuse","保险丝","/fjuːz/","The fuse is blown."],
+["plug","插头","/plʌɡ/","Check the plug first."],
+["pump","泵","/pʌmp/","The water pump is noisy."],
+["valve","阀门","/vælv/","Close the valve before service."],
+["scan","扫描","/skæn/","Start the scan now."],
+["fault","故障","/fɔːlt/","We found the fault on the board."],
+["error","错误","/ˈerər/","The screen shows an error."],
+["check","检查","/tʃek/","Check the voltage before service."],
+["power","电源","/ˈpaʊər/","Please turn off the power first."],
+["cable","电缆","/ˈkeɪbl/","The cable is loose."],
+["board","电路板","/bɔːrd/","Replace the control board."],
+["probe","探头","/proʊb/","Clean the probe after use."],
+["cover","盖板","/ˈkʌvər/","Open the cover carefully."],
+["noise","噪声","/nɔɪz/","The fan makes a strange noise."],
+["image","图像","/ˈɪmɪdʒ/","The image is not clear."],
+["spare","备用的","/sper/","We have a spare fuse."],
+["loose","松动的","/luːs/","The connector is loose."],
+["alarm","报警","/əˈlɑːrm/","An alarm appeared on the console."],
+["screen","屏幕","/skriːn/","Touch the screen to start."],
+["switch","开关","/swɪtʃ/","Turn the main switch on."],
+["signal","信号","/ˈsɪɡnl/","The signal is weak."],
+["filter","滤器","/ˈfɪltər/","Change the air filter."],
+["sensor","传感器","/ˈsensər/","The sensor is dirty."],
+["system","系统","/ˈsɪstəm/","The system restarted itself."],
+["repair","维修","/rɪˈper/","The repair takes two hours."],
+["report","报告","/rɪˈpɔːrt/","Send the service report today."],
+["module","模块","/ˈmɑːdʒuːl/","Replace the power module."],
+["magnet","磁体","/ˈmæɡnət/","The MRI magnet is very strong."],
+["gantry","机架","/ˈɡæntri/","The CT gantry does not rotate."],
+["helium","氦","/ˈhiːliəm/","Check the helium level."],
+["socket","插座","/ˈsɑːkɪt/","Use a grounded socket."],
+["manual","手册","/ˈmænjuəl/","Read the service manual."],
+["ground","接地","/ɡraʊnd/","The device must be grounded."],
+["adjust","调整","/əˈdʒʌst/","Adjust the table position."],
+["cooling","冷却","/ˈkuːlɪŋ/","The cooling system failed."],
+["leakage","泄漏","/ˈliːkɪdʒ/","We found a small leakage."],
+["voltage","电压","/ˈvoʊltɪdʒ/","Measure the input voltage."],
+["current","电流","/ˈkʌrənt/","The current is too high."],
+["circuit","电路","/ˈsɜːrkɪt/","The circuit is open."],
+["battery","电池","/ˈbætəri/","The backup battery is empty."],
+["scanner","扫描仪","/ˈskænər/","The scanner is offline."],
+["monitor","显示器","/ˈmɑːnɪtər/","The monitor stays dark."],
+["console","控制台","/ˈkɑːnsoʊl/","Reboot the console."],
+["restart","重启","/ˌriːˈstɑːrt/","Restart the system twice."],
+["replace","更换","/rɪˈpleɪs/","Replace the damaged coil."],
+["install","安装","/ɪnˈstɔːl/","Install the new software."],
+["upgrade","升级","/ˈʌpɡreɪd/","The upgrade takes one day."],
+["service","维修服务","/ˈsɜːrvɪs/","Call the service engineer."],
+["warning","警告","/ˈwɔːrnɪŋ/","A warning message appeared."],
+["pressure","压力","/ˈpreʃər/","The pressure is too low."],
+["damaged","损坏的","/ˈdæmɪdʒd/","The damaged part was removed."],
+["shutdown","停机","/ˈʃʌtdaʊn/","A full shutdown is needed."],
+["software","软件","/ˈsɔːftwer/","Update the software tonight."],
+["hardware","硬件","/ˈhɑːrdwer/","This is a hardware fault."],
+["firmware","固件","/ˈfɜːrmwer/","Upload the new firmware."],
+["detector","探测器","/dɪˈtektər/","The detector needs calibration."],
+["hospital","医院","/ˈhɑːspɪtl/","Send the part to the hospital."],
+["customer","客户","/ˈkʌstəmər/","The customer called this morning."],
+["delivery","交付","/dɪˈlɪvəri/","The delivery is delayed."],
+["schedule","计划","/ˈskedʒuːl/","Schedule the service next week."],
+["contract","合同","/ˈkɑːntrækt/","The contract expires in June."],
+["warranty","保修","/ˈwɔːrənti/","The warranty is already over."],
+["engineer","工程师","/ˌendʒɪˈnɪr/","The engineer arrived on site."],
+["operator","操作员","/ˈɑːpəreɪtər/","The operator reported a fault."],
+["connector","接头","/kəˈnektər/","The connector was loose."],
+["equipment","设备","/ɪˈkwɪpmənt/","The equipment is under warranty."],
+["inspection","巡检","/ɪnˈspekʃn/","A yearly inspection is required."],
+["resolution","分辨率","/ˌrezəˈluːʃn/","The image resolution dropped."],
+["collimator","准直器","/ˈkɑːlɪmeɪtər/","The collimator is stuck."],
+["compressor","压缩机","/kəmˈpresər/","The compressor stopped again."],
+["insulation","绝缘","/ˌɪnsəˈleɪʃn/","Check the cable insulation."],
+["accessory","配件","/əkˈsesəri/","One accessory is missing."],
+["preventive","预防性的","/prɪˈventɪv/","Preventive maintenance is due."],
+["calibration","校准","/ˌkælɪˈbreɪʃn/","Finish the calibration first."],
+["maintenance","维护","/ˈmeɪntənəns/","Maintenance is done every year."],
+["replacement","替换件","/rɪˈpleɪsmənt/","The replacement arrived today."],
+["installation","安装过程","/ˌɪnstəˈleɪʃn/","The installation is finished."],
+["temperature","温度","/ˈtemprətʃər/","The room temperature is high."],
+["transformer","变压器","/trænsˈfɔːrmər/","Check the transformer output."],
+["malfunction","失灵","/ˌmælˈfʌŋkʃn/","A malfunction was reported."],
+["interference","干扰","/ˌɪntərˈfɪrəns/","Signal interference is possible."],
+["manufacturer","制造商","/ˌmænjuˈfæktʃərər/","Contact the manufacturer."],
+["specification","规格","/ˌspesɪfɪˈkeɪʃn/","Read the specification sheet."],
+["troubleshooting","故障排除","/ˈtrʌblʃuːtɪŋ/","Start troubleshooting now."]
+];
+
+/* CET-4 精选 · word|中文|音标|例句 */
+const CET4_RAW = `
+ability|能力|/əˈbɪləti/|She has the ability to lead.
+absorb|吸收|/əbˈzɔːrb/|Plants absorb water from the soil.
+accept|接受|/əkˈsept/|He accepted the new offer.
+account|账户|/əˈkaʊnt/|Please check your bank account.
+achieve|实现|/əˈtʃiːv/|We achieved our goal early.
+active|积极的|/ˈæktɪv/|She is active in the group.
+actual|实际的|/ˈæktʃuəl/|The actual cost was higher.
+admit|承认|/ədˈmɪt/|He admitted his mistake.
+advance|前进|/ədˈvæns/|The team advanced quickly.
+advantage|优势|/ədˈvæntɪdʒ/|Speed is our main advantage.
+advice|建议|/ədˈvaɪs/|I need your advice on this.
+affect|影响|/əˈfekt/|The rain affected the plan.
+afford|负担得起|/əˈfɔːrd/|We cannot afford a new car.
+agency|机构|/ˈeɪdʒənsi/|The agency sent a reply.
+agree|同意|/əˈɡriː/|They agreed with the plan.
+allow|允许|/əˈlaʊ/|Smoking is not allowed here.
+amount|数量|/əˈmaʊnt/|A large amount of water.
+ancient|古代的|/ˈeɪnʃənt/|This is an ancient city.
+announce|宣布|/əˈnaʊns/|They announced the result.
+anxious|焦虑的|/ˈæŋkʃəs/|She felt anxious before the test.
+apply|申请|/əˈplaɪ/|He applied for the job.
+approach|方法|/əˈproʊtʃ/|We need a new approach.
+argue|争论|/ˈɑːrɡjuː/|They argued about the price.
+arrange|安排|/əˈreɪndʒ/|I arranged a meeting.
+attach|附上|/əˈtætʃ/|Please attach the file.
+attempt|尝试|/əˈtempt/|He made a second attempt.
+attend|参加|/əˈtend/|She attended the meeting.
+attitude|态度|/ˈætɪtuːd/|His attitude has changed.
+attract|吸引|/əˈtrækt/|The city attracts many workers.
+average|平均的|/ˈævərɪdʒ/|The average price is low.
+avoid|避免|/əˈvɔɪd/|Avoid this road at night.
+aware|意识到的|/əˈwer/|I was not aware of it.
+balance|平衡|/ˈbæləns/|Keep a good balance.
+behave|表现|/bɪˈheɪv/|The children behaved well.
+belief|信念|/bɪˈliːf/|It is a common belief.
+benefit|好处|/ˈbenɪfɪt/|Exercise has many benefits.
+brief|简短的|/briːf/|Give me a brief report.
+budget|预算|/ˈbʌdʒɪt/|The budget is very tight.
+capable|有能力的|/ˈkeɪpəbl/|He is capable of more.
+career|职业|/kəˈrɪr/|She changed her career.
+cause|原因|/kɔːz/|What was the cause?
+certain|确定的|/ˈsɜːrtn/|I am certain about it.
+challenge|挑战|/ˈtʃælɪndʒ/|This is a real challenge.
+character|性格|/ˈkærəktər/|He has a strong character.
+charge|收费|/tʃɑːrdʒ/|They charge ten dollars.
+choice|选择|/tʃɔɪs/|You have no choice.
+claim|声称|/kleɪm/|He claims it is free.
+climate|气候|/ˈklaɪmət/|The climate is dry here.
+comfort|安慰|/ˈkʌmfərt/|Her words gave me comfort.
+command|命令|/kəˈmænd/|He gave a clear command.
+comment|评论|/ˈkɑːment/|She made no comment.
+common|常见的|/ˈkɑːmən/|This is a common problem.
+compare|比较|/kəmˈper/|Compare the two plans.
+complain|抱怨|/kəmˈpleɪn/|They complained about noise.
+complete|完成|/kəmˈpliːt/|We completed the work.
+concern|关心|/kənˈsɜːrn/|Safety is our main concern.
+condition|条件|/kənˈdɪʃn/|The road is in bad condition.
+confidence|信心|/ˈkɑːnfɪdəns/|He lost his confidence.
+confirm|确认|/kənˈfɜːrm/|Please confirm the time.
+confuse|使困惑|/kənˈfjuːz/|The map confused me.
+consider|考虑|/kənˈsɪdər/|We considered every option.
+contain|包含|/kənˈteɪn/|The box contains books.
+continue|继续|/kənˈtɪnjuː/|Continue until it stops.
+control|控制|/kənˈtroʊl/|He lost control of it.
+convenient|方便的|/kənˈviːniənt/|Is Monday convenient?
+create|创造|/kriˈeɪt/|They created a new tool.
+culture|文化|/ˈkʌltʃər/|Local culture is rich.
+damage|损害|/ˈdæmɪdʒ/|The storm caused damage.
+decide|决定|/dɪˈsaɪd/|We decided to wait.
+declare|宣布|/dɪˈkler/|He declared the result.
+decrease|减少|/dɪˈkriːs/|Sales decreased last year.
+degree|程度|/dɪˈɡriː/|To some degree, yes.
+demand|需求|/dɪˈmænd/|Demand is very high.
+depend|依靠|/dɪˈpend/|It depends on the price.
+describe|描述|/dɪˈskraɪb/|Describe what you saw.
+design|设计|/dɪˈzaɪn/|The design is simple.
+develop|发展|/dɪˈveləp/|The city developed fast.
+difference|差别|/ˈdɪfrəns/|I see no difference.
+direct|直接的|/dəˈrekt/|Take the direct route.
+discover|发现|/dɪˈskʌvər/|They discovered a problem.
+discuss|讨论|/dɪˈskʌs/|Let us discuss it later.
+distance|距离|/ˈdɪstəns/|The distance is short.
+divide|分开|/dɪˈvaɪd/|Divide it into three parts.
+economy|经济|/ɪˈkɑːnəmi/|The economy is growing.
+effect|影响|/ɪˈfekt/|The effect was clear.
+effort|努力|/ˈefərt/|It took a lot of effort.
+employ|雇用|/ɪmˈplɔɪ/|They employ two hundred people.
+encourage|鼓励|/ɪnˈkɜːrɪdʒ/|She encouraged me to try.
+environment|环境|/ɪnˈvaɪrənmənt/|We protect the environment.
+escape|逃跑|/ɪˈskeɪp/|The gas escaped slowly.
+especially|尤其|/ɪˈspeʃəli/|It is cold, especially at night.
+establish|建立|/ɪˈstæblɪʃ/|They established a company.
+event|事件|/ɪˈvent/|It was a big event.
+evidence|证据|/ˈevɪdəns/|There is no evidence.
+exact|精确的|/ɪɡˈzækt/|Give me the exact number.
+examine|检查|/ɪɡˈzæmɪn/|The doctor examined him.
+example|例子|/ɪɡˈzæmpl/|Give me an example.
+exchange|交换|/ɪksˈtʃeɪndʒ/|We exchanged phone numbers.
+exist|存在|/ɪɡˈzɪst/|The problem still exists.
+expect|期望|/ɪkˈspekt/|I expect a reply today.
+expense|费用|/ɪkˈspens/|Travel expenses are paid.
+experience|经验|/ɪkˈspɪriəns/|He has ten years of experience.
+explain|解释|/ɪkˈspleɪn/|Please explain it again.
+express|表达|/ɪkˈspres/|She expressed her thanks.
+familiar|熟悉的|/fəˈmɪliər/|The name sounds familiar.
+famous|著名的|/ˈfeɪməs/|He is a famous writer.
+figure|数字|/ˈfɪɡjər/|The figure looks wrong.
+follow|跟随|/ˈfɑːloʊ/|Follow the main road.
+foreign|外国的|/ˈfɔːrən/|She speaks a foreign language.
+forget|忘记|/fərˈɡet/|Do not forget the key.
+freedom|自由|/ˈfriːdəm/|They fought for freedom.
+further|进一步的|/ˈfɜːrðər/|We need further study.
+gather|聚集|/ˈɡæðər/|People gathered outside.
+general|总体的|/ˈdʒenrəl/|In general, it works.
+government|政府|/ˈɡʌvərnmənt/|The government agreed.
+gradually|逐渐地|/ˈɡrædʒuəli/|It gradually became warm.
+guide|指导|/ɡaɪd/|He guided us through it.
+habit|习惯|/ˈhæbɪt/|Reading is a good habit.
+handle|处理|/ˈhændl/|She handled it well.
+health|健康|/helθ/|Health comes first.
+honest|诚实的|/ˈɑːnɪst/|He is an honest man.
+however|然而|/haʊˈevər/|However, the cost is high.
+huge|巨大的|/hjuːdʒ/|It is a huge building.
+ignore|忽视|/ɪɡˈnɔːr/|Do not ignore the warning.
+imagine|想象|/ɪˈmædʒɪn/|Imagine a quiet room.
+improve|改进|/ɪmˈpruːv/|We improved the design.
+include|包括|/ɪnˈkluːd/|The price includes tax.
+increase|增加|/ɪnˈkriːs/|Costs increased again.
+independent|独立的|/ˌɪndɪˈpendənt/|She is fully independent.
+industry|工业|/ˈɪndəstri/|The industry is growing.
+influence|影响|/ˈɪnfluəns/|He had a big influence.
+inform|通知|/ɪnˈfɔːrm/|Please inform the team.
+instead|代替|/ɪnˈsted/|Use this one instead.
+intend|打算|/ɪnˈtend/|We intend to stay.
+interest|兴趣|/ˈɪntrəst/|He shows great interest.
+introduce|介绍|/ˌɪntrəˈduːs/|Let me introduce my friend.
+invite|邀请|/ɪnˈvaɪt/|They invited us to dinner.
+involve|涉及|/ɪnˈvɑːlv/|The job involves travel.
+judge|判断|/dʒʌdʒ/|Do not judge too fast.
+knowledge|知识|/ˈnɑːlɪdʒ/|His knowledge is wide.
+language|语言|/ˈlæŋɡwɪdʒ/|English is a world language.
+limit|限制|/ˈlɪmɪt/|There is a time limit.
+local|当地的|/ˈloʊkl/|Ask a local worker.
+major|主要的|/ˈmeɪdʒər/|That is a major problem.
+manage|管理|/ˈmænɪdʒ/|She manages the office.
+market|市场|/ˈmɑːrkɪt/|The market is quiet today.
+material|材料|/məˈtɪriəl/|We need better material.
+mention|提到|/ˈmenʃn/|He mentioned your name.
+method|方法|/ˈmeθəd/|Try another method.
+modern|现代的|/ˈmɑːdərn/|It is a modern design.
+natural|自然的|/ˈnætʃrəl/|That is a natural result.
+necessary|必要的|/ˈnesəseri/|Sleep is necessary.
+notice|注意|/ˈnoʊtɪs/|I did not notice it.
+obvious|明显的|/ˈɑːbviəs/|The answer is obvious.
+occur|发生|/əˈkɜːr/|The fault occurs at night.
+offer|提供|/ˈɔːfər/|They offered us help.
+opinion|意见|/əˈpɪnjən/|In my opinion, it works.
+opportunity|机会|/ˌɑːpərˈtuːnəti/|This is a good opportunity.
+organize|组织|/ˈɔːrɡənaɪz/|She organized the trip.
+abroad|国外|/əˈbrɔːd/|She studied abroad for a year.
+absence|缺席|/ˈæbsəns/|His absence was noticed.
+accident|事故|/ˈæksɪdənt/|The accident happened at noon.
+accompany|陪伴|/əˈkʌmpəni/|I will accompany you there.
+accurate|准确的|/ˈækjərət/|The result is accurate.
+accuse|指责|/əˈkjuːz/|They accused him of lying.
+acquire|获得|/əˈkwaɪr/|He acquired a new skill.
+adapt|适应|/əˈdæpt/|Children adapt very fast.
+addition|增加|/əˈdɪʃn/|In addition, it is cheap.
+address|地址|/ˈædres/|Write your address here.
+adopt|采用|/əˈdɑːpt/|They adopted a new rule.
+advertise|做广告|/ˈædvərtaɪz/|They advertise on TV.
+afraid|害怕的|/əˈfreɪd/|Do not be afraid.
+agriculture|农业|/ˈæɡrɪkʌltʃər/|Agriculture matters here.
+aim|目标|/eɪm/|Our aim is simple.
+alike|相似的|/əˈlaɪk/|The twins look alike.
+alone|独自|/əˈloʊn/|He lives alone.
+aloud|大声地|/əˈlaʊd/|Read the sentence aloud.
+alter|改变|/ˈɔːltər/|We altered the plan.
+although|虽然|/ɔːlˈðoʊ/|Although it rained, we went.
+altogether|总共|/ˌɔːltəˈɡeðər/|Altogether it cost fifty.
+ambition|抱负|/æmˈbɪʃn/|She has great ambition.
+analysis|分析|/əˈnæləsɪs/|The analysis took a week.
+angle|角度|/ˈæŋɡl/|Look from this angle.
+annual|年度的|/ˈænjuəl/|The annual report is out.
+apart|分开|/əˈpɑːrt/|They live far apart.
+apologize|道歉|/əˈpɑːlədʒaɪz/|He apologized at once.
+appear|出现|/əˈpɪr/|A message appeared.
+appetite|食欲|/ˈæpɪtaɪt/|He has a good appetite.
+appointment|约会|/əˈpɔɪntmənt/|I have an appointment today.
+appreciate|感激|/əˈpriːʃieɪt/|I appreciate your help.
+approve|批准|/əˈpruːv/|The manager approved it.
+arise|出现|/əˈraɪz/|Problems may arise.
+arrest|逮捕|/əˈrest/|The police arrested him.
+article|文章|/ˈɑːrtɪkl/|I read the article twice.
+artificial|人造的|/ˌɑːrtɪˈfɪʃl/|This is artificial light.
+ashamed|羞愧的|/əˈʃeɪmd/|He felt ashamed.
+aside|在旁边|/əˈsaɪd/|Put it aside for now.
+aspect|方面|/ˈæspekt/|Consider every aspect.
+assist|协助|/əˈsɪst/|She assisted the doctor.
+assume|假定|/əˈsuːm/|Do not assume too much.
+athlete|运动员|/ˈæθliːt/|He is a young athlete.
+atmosphere|气氛|/ˈætməsfɪr/|The atmosphere was quiet.
+attack|攻击|/əˈtæk/|The attack failed.
+audience|观众|/ˈɔːdiəns/|The audience stood up.
+author|作者|/ˈɔːθər/|The author lives here.
+authority|权威|/əˈθɔːrəti/|He is an authority on it.
+available|可用的|/əˈveɪləbl/|The room is available.
+awake|醒着的|/əˈweɪk/|I was awake all night.
+award|奖|/əˈwɔːrd/|She won an award.
+awkward|尴尬的|/ˈɔːkwərd/|It was an awkward moment.
+background|背景|/ˈbækɡraʊnd/|Tell me your background.
+bare|裸露的|/ber/|The wire is bare.
+bargain|讨价还价|/ˈbɑːrɡən/|We bargained for an hour.
+barrier|障碍|/ˈbæriər/|Language is a barrier.
+basis|基础|/ˈbeɪsɪs/|We meet on a daily basis.
+beg|乞求|/beɡ/|He begged for more time.
+beneath|在下面|/bɪˈniːθ/|The key is beneath the mat.
+besides|除此之外|/bɪˈsaɪdz/|Besides, it is late.
+bind|捆绑|/baɪnd/|Bind the cables together.
+blame|责备|/bleɪm/|Do not blame yourself.
+blank|空白的|/blæŋk/|Leave the line blank.
+blend|混合|/blend/|Blend the two colors.
+boast|吹嘘|/boʊst/|He boasts about his car.
+bold|大胆的|/boʊld/|That was a bold move.
+border|边界|/ˈbɔːrdər/|We crossed the border.
+bother|打扰|/ˈbɑːðər/|Sorry to bother you.
+brake|刹车|/breɪk/|Press the brake gently.
+branch|分支|/bræntʃ/|The bank has a branch here.
+breath|呼吸|/breθ/|Take a deep breath.
+broad|宽的|/brɔːd/|It is a broad road.
+burden|负担|/ˈbɜːrdn/|That is a heavy burden.
+bury|埋葬|/ˈberi/|The cable is buried here.
+calm|平静的|/kɑːm/|Stay calm and wait.
+campus|校园|/ˈkæmpəs/|The campus is quiet.
+cancel|取消|/ˈkænsl/|They cancelled the meeting.
+candidate|候选人|/ˈkændɪdət/|She is a strong candidate.
+capacity|容量|/kəˈpæsəti/|The capacity is limited.
+capital|首都|/ˈkæpɪtl/|Beijing is the capital.
+capture|捕获|/ˈkæptʃər/|The camera captured it.
+carbon|碳|/ˈkɑːrbən/|Carbon is everywhere.
+casual|随意的|/ˈkæʒuəl/|Wear casual clothes.
+category|类别|/ˈkætəɡɔːri/|Put it in this category.
+ceiling|天花板|/ˈsiːlɪŋ/|The lamp hangs from the ceiling.
+celebrate|庆祝|/ˈselɪbreɪt/|We celebrated the result.
+century|世纪|/ˈsentʃəri/|That was last century.
+ceremony|仪式|/ˈserəmoʊni/|The ceremony was short.
+chain|链条|/tʃeɪn/|The chain is broken.
+chapter|章节|/ˈtʃæptər/|Read the next chapter.
+cheat|欺骗|/tʃiːt/|Do not cheat on tests.
+chemical|化学的|/ˈkemɪkl/|Store the chemical safely.
+chief|主要的|/tʃiːf/|He is the chief engineer.
+circumstance|情况|/ˈsɜːrkəmstæns/|Under this circumstance, wait.
+citizen|公民|/ˈsɪtɪzn/|Every citizen can vote.
+civil|民用的|/ˈsɪvl/|Civil rules apply here.
+clarify|澄清|/ˈklærəfaɪ/|Please clarify the point.
+classify|分类|/ˈklæsɪfaɪ/|Classify the parts first.
+clue|线索|/kluː/|That is a useful clue.
+coast|海岸|/koʊst/|We drove along the coast.
+collapse|倒塌|/kəˈlæps/|The shelf collapsed.
+colleague|同事|/ˈkɑːliːɡ/|My colleague will help.
+collect|收集|/kəˈlekt/|Collect the data first.
+combine|结合|/kəmˈbaɪn/|Combine the two lists.
+comfortable|舒适的|/ˈkʌmftəbl/|The chair is comfortable.
+commercial|商业的|/kəˈmɜːrʃl/|It is a commercial product.
+commit|承诺|/kəˈmɪt/|We committed to the plan.
+committee|委员会|/kəˈmɪti/|The committee met today.
+communicate|交流|/kəˈmjuːnɪkeɪt/|We communicate by email.
+community|社区|/kəˈmjuːnəti/|The community is friendly.
+companion|同伴|/kəmˈpænjən/|He is a good companion.
+compete|竞争|/kəmˈpiːt/|They compete for the job.
+complex|复杂的|/kəmˈpleks/|The problem is complex.
+compose|组成|/kəmˈpoʊz/|Three parts compose the unit.
+conclude|得出结论|/kənˈkluːd/|We concluded the meeting.
+conduct|进行|/kənˈdʌkt/|They conducted a test.
+conference|会议|/ˈkɑːnfərəns/|The conference starts Monday.
+confront|面对|/kənˈfrʌnt/|We must confront the issue.
+connect|连接|/kəˈnekt/|Connect the two cables.
+conscious|有意识的|/ˈkɑːnʃəs/|He is conscious of it.
+consequence|后果|/ˈkɑːnsəkwens/|Think about the consequence.
+consist|由…组成|/kənˈsɪst/|It consists of three parts.
+constant|不断的|/ˈkɑːnstənt/|There is constant noise.
+construct|建造|/kənˈstrʌkt/|They constructed a bridge.
+consume|消耗|/kənˈsuːm/|The unit consumes power.
+contact|联系|/ˈkɑːntækt/|Contact me tomorrow.
+content|内容|/ˈkɑːntent/|Check the content first.
+contest|比赛|/ˈkɑːntest/|He won the contest.
+context|上下文|/ˈkɑːntekst/|Read it in context.
+contribute|贡献|/kənˈtrɪbjuːt/|Everyone contributed ideas.
+convert|转换|/kənˈvɜːrt/|Convert it to a PDF.
+convey|传达|/kənˈveɪ/|The words convey his worry.
+convince|说服|/kənˈvɪns/|She convinced the team.
+cooperate|合作|/koʊˈɑːpəreɪt/|The two teams cooperate.
+cope|应对|/koʊp/|He copes with pressure well.
+core|核心|/kɔːr/|That is the core problem.
+correspond|符合|/ˌkɔːrəˈspɑːnd/|The numbers correspond.
+council|委员会|/ˈkaʊnsl/|The council agreed.
+courage|勇气|/ˈkɜːrɪdʒ/|It takes courage to ask.
+crash|碰撞|/kræʃ/|The program crashed.
+credit|信用|/ˈkredɪt/|He has good credit.
+crime|犯罪|/kraɪm/|Crime rates fell.
+crisis|危机|/ˈkraɪsɪs/|The crisis passed.
+criticize|批评|/ˈkrɪtɪsaɪz/|Do not criticize too fast.
+crowd|人群|/kraʊd/|A crowd gathered outside.
+cure|治愈|/kjʊr/|There is no quick cure.
+curious|好奇的|/ˈkjʊriəs/|I am curious about it.
+curve|曲线|/kɜːrv/|The curve rises here.
+custom|习俗|/ˈkʌstəm/|It is a local custom.
+daily|每日的|/ˈdeɪli/|This is a daily task.
+deadline|截止日期|/ˈdedlaɪn/|The deadline is Friday.
+debate|辩论|/dɪˈbeɪt/|The debate lasted an hour.
+debt|债务|/det/|He paid the debt.
+decade|十年|/ˈdekeɪd/|The last decade was busy.
+defeat|击败|/dɪˈfiːt/|They defeated the team.
+defend|保卫|/dɪˈfend/|Defend your opinion.
+define|定义|/dɪˈfaɪn/|Define the term first.
+delay|延迟|/dɪˈleɪ/|The flight was delayed.
+delicate|精细的|/ˈdelɪkət/|This is a delicate part.
+deliver|递送|/dɪˈlɪvər/|They delivered it today.
+deny|否认|/dɪˈnaɪ/|He denied the charge.
+depart|离开|/dɪˈpɑːrt/|The train departs at six.
+deserve|应得|/dɪˈzɜːrv/|You deserve a break.
+desire|渴望|/dɪˈzaɪr/|He has no desire to move.
+despite|尽管|/dɪˈspaɪt/|Despite the rain, we left.
+destroy|破坏|/dɪˈstrɔɪ/|Fire destroyed the room.
+detail|细节|/ˈdiːteɪl/|Check every detail.
+determine|决定|/dɪˈtɜːrmɪn/|We determined the cause.
+devote|奉献|/dɪˈvoʊt/|He devoted a day to it.
+differ|不同|/ˈdɪfər/|Opinions differ here.
+digital|数字的|/ˈdɪdʒɪtl/|Use the digital version.
+direction|方向|/dəˈrekʃn/|Follow this direction.
+disagree|不同意|/ˌdɪsəˈɡriː/|I disagree with that.
+disappear|消失|/ˌdɪsəˈpɪr/|The error disappeared.
+disappoint|使失望|/ˌdɪsəˈpɔɪnt/|The result disappointed us.
+disaster|灾难|/dɪˈzæstər/|It was a small disaster.
+discipline|纪律|/ˈdɪsəplɪn/|The team has discipline.
+disease|疾病|/dɪˈziːz/|The disease spreads slowly.
+display|显示|/dɪˈspleɪ/|The screen displays data.
+distinct|明显的|/dɪˈstɪŋkt/|There is a distinct smell.
+distribute|分发|/dɪˈstrɪbjuːt/|Distribute the forms now.
+disturb|打扰|/dɪˈstɜːrb/|Do not disturb him.
+document|文件|/ˈdɑːkjumənt/|Sign the document.
+domestic|国内的|/dəˈmestɪk/|Domestic sales rose.
+doubt|怀疑|/daʊt/|I doubt that.
+draft|草稿|/dræft/|Send me the first draft.
+drag|拖|/dræɡ/|Drag the file here.
+dramatic|戏剧性的|/drəˈmætɪk/|A dramatic change happened.
+due|到期的|/duː/|The payment is due.
+duty|职责|/ˈduːti/|It is my duty.
+eager|渴望的|/ˈiːɡər/|He is eager to start.
+earn|赚取|/ɜːrn/|She earns enough.
+edge|边缘|/edʒ/|Stand at the edge.
+edit|编辑|/ˈedɪt/|Edit the text first.
+educate|教育|/ˈedʒukeɪt/|They educate young workers.
+efficient|高效的|/ɪˈfɪʃnt/|The method is efficient.
+elect|选举|/ɪˈlekt/|They elected a leader.
+elsewhere|在别处|/ˌelsˈwer/|Look elsewhere for it.
+embarrass|使尴尬|/ɪmˈberəs/|The mistake embarrassed him.
+emergency|紧急情况|/ɪˈmɜːrdʒənsi/|Call in an emergency.
+emotion|情绪|/ɪˈmoʊʃn/|He hid his emotion.
+emphasize|强调|/ˈemfəsaɪz/|She emphasized safety.
+enable|使能够|/ɪˈneɪbl/|This enables faster work.
+energy|能量|/ˈenərdʒi/|Save energy at night.
+engage|参与|/ɪnˈɡeɪdʒ/|He engaged in the talk.
+enormous|巨大的|/ɪˈnɔːrməs/|The cost is enormous.
+ensure|确保|/ɪnˈʃʊr/|Ensure the door is locked.
+enterprise|企业|/ˈentərpraɪz/|It is a small enterprise.
+enthusiasm|热情|/ɪnˈθuːziæzəm/|He works with enthusiasm.
+entire|整个的|/ɪnˈtaɪr/|The entire day was lost.
+entry|进入|/ˈentri/|Entry is free today.
+equal|相等的|/ˈiːkwəl/|The two are equal.
+essential|必要的|/ɪˈsenʃl/|Sleep is essential.
+estimate|估计|/ˈestɪmeɪt/|Estimate the cost first.
+evaluate|评价|/ɪˈvæljueɪt/|Evaluate the two plans.
+eventually|最终|/ɪˈventʃuəli/|It worked eventually.
+evident|明显的|/ˈevɪdənt/|The reason is evident.
+excellent|优秀的|/ˈeksələnt/|The result is excellent.
+except|除了|/ɪkˈsept/|Everyone except him came.
+excuse|借口|/ɪkˈskjuːs/|That is a poor excuse.
+exhibit|展出|/ɪɡˈzɪbɪt/|They exhibit new tools.
+expand|扩展|/ɪkˈspænd/|Metal expands when hot.
+expert|专家|/ˈekspɜːrt/|Ask an expert first.
+export|出口|/ˈekspɔːrt/|They export machines.
+expose|暴露|/ɪkˈspoʊz/|Do not expose the wire.
+extend|延长|/ɪkˈstend/|Extend the deadline.
+extent|程度|/ɪkˈstent/|To what extent is it true?
+extra|额外的|/ˈekstrə/|We need extra time.
+extreme|极端的|/ɪkˈstriːm/|Avoid extreme heat.
+facility|设施|/fəˈsɪləti/|The facility is new.
+factor|因素|/ˈfæktər/|Cost is a key factor.
+fade|褪色|/feɪd/|The color faded fast.
+fail|失败|/feɪl/|The test failed twice.
+faith|信任|/feɪθ/|I have faith in you.
+fashion|时尚|/ˈfæʃn/|It is out of fashion.
+fee|费用|/fiː/|The fee is small.
+feature|特征|/ˈfiːtʃər/|This feature is new.
+fence|栅栏|/fens/|Paint the fence today.
+fetch|取来|/fetʃ/|Fetch the tool for me.
+fierce|激烈的|/fɪrs/|Competition is fierce.
+finance|财务|/ˈfaɪnæns/|Finance approved it.
+firm|公司|/fɜːrm/|She joined a small firm.
+flee|逃跑|/fliː/|They fled the building.
+flexible|灵活的|/ˈfleksəbl/|The plan is flexible.
+float|漂浮|/floʊt/|Wood floats on water.
+fog|雾|/fɔːɡ/|Fog delayed the flight.
+fold|折叠|/foʊld/|Fold the paper twice.
+forbid|禁止|/fərˈbɪd/|The rule forbids it.
+force|力量|/fɔːrs/|Use less force.
+forecast|预报|/ˈfɔːrkæst/|The forecast says rain.
+formal|正式的|/ˈfɔːrml/|Send a formal letter.
+former|前者的|/ˈfɔːrmər/|The former plan was better.
+fortune|财富|/ˈfɔːrtʃən/|He made a fortune.
+forward|向前|/ˈfɔːrwərd/|Move forward slowly.
+frequent|频繁的|/ˈfriːkwənt/|Faults are frequent here.
+friction|摩擦|/ˈfrɪkʃn/|Friction wears the part.
+frighten|使害怕|/ˈfraɪtn/|The noise frightened her.
+fuel|燃料|/ˈfjuːəl/|Fuel prices rose again.
+function|功能|/ˈfʌŋkʃn/|This function is useful.
+fundamental|基本的|/ˌfʌndəˈmentl/|That is a fundamental rule.
+furniture|家具|/ˈfɜːrnɪtʃər/|The furniture arrived.
+gain|获得|/ɡeɪn/|We gained some time.
+gap|差距|/ɡæp/|There is a small gap.
+generate|产生|/ˈdʒenəreɪt/|The unit generates heat.
+generous|慷慨的|/ˈdʒenərəs/|He is generous with time.
+gentle|温和的|/ˈdʒentl/|Use a gentle touch.
+genuine|真正的|/ˈdʒenjuɪn/|This is a genuine part.
+glance|一瞥|/ɡlæns/|He gave it a glance.
+goal|目标|/ɡoʊl/|Set a clear goal.
+grain|谷物|/ɡreɪn/|Grain prices are stable.
+grant|授予|/ɡrænt/|They granted the request.
+grasp|抓住|/ɡræsp/|He grasped the idea.
+grateful|感激的|/ˈɡreɪtfl/|I am grateful for it.
+greet|问候|/ɡriːt/|She greeted the customer.
+guarantee|保证|/ˌɡærənˈtiː/|We guarantee the repair.
+guilty|有罪的|/ˈɡɪlti/|He felt guilty about it.
+harm|伤害|/hɑːrm/|It does no harm.
+harvest|收获|/ˈhɑːrvɪst/|The harvest was good.
+hesitate|犹豫|/ˈhezɪteɪt/|Do not hesitate to ask.
+hire|雇用|/ˈhaɪr/|They hired two workers.
+hollow|空心的|/ˈhɑːloʊ/|The tube is hollow.
+household|家庭|/ˈhaʊshoʊld/|A household needs power.
+humble|谦虚的|/ˈhʌmbl/|He stayed humble.
+humor|幽默|/ˈhjuːmər/|She has good humor.
+hunt|寻找|/hʌnt/|We hunt for the fault.
+identify|识别|/aɪˈdentɪfaɪ/|Identify the part first.
+idle|空闲的|/ˈaɪdl/|The machine sits idle.
+illustrate|说明|/ˈɪləstreɪt/|The chart illustrates it.
+imitate|模仿|/ˈɪmɪteɪt/|Do not imitate bad habits.
+immediate|立即的|/ɪˈmiːdiət/|We need an immediate reply.
+impact|影响|/ˈɪmpækt/|The impact was small.
+imply|暗示|/ɪmˈplaɪ/|The data implies a fault.
+import|进口|/ˈɪmpɔːrt/|They import the parts.
+impose|强加|/ɪmˈpoʊz/|Do not impose your view.
+impress|使印象深刻|/ɪmˈpres/|The result impressed us.
+incident|事件|/ˈɪnsɪdənt/|Report the incident today.
+indicate|表明|/ˈɪndɪkeɪt/|The light indicates power.
+individual|个人的|/ˌɪndɪˈvɪdʒuəl/|Each individual differs.
+inject|注射|/ɪnˈdʒekt/|Inject the contrast slowly.
+injure|伤害|/ˈɪndʒər/|Two workers were injured.
+innocent|无辜的|/ˈɪnəsnt/|He is innocent here.
+inquiry|询问|/ˈɪnkwəri/|We sent an inquiry.
+insert|插入|/ɪnˈsɜːrt/|Insert the card here.
+insist|坚持|/ɪnˈsɪst/|He insisted on waiting.
+inspire|激励|/ɪnˈspaɪr/|Her words inspired us.
+instant|瞬间|/ˈɪnstənt/|It worked in an instant.
+institute|机构|/ˈɪnstɪtuːt/|The institute is famous.
+instruct|指导|/ɪnˈstrʌkt/|He instructed the team.
+insurance|保险|/ɪnˈʃʊrəns/|Insurance covers it.
+intelligent|聪明的|/ɪnˈtelɪdʒənt/|That is an intelligent question.
+intense|强烈的|/ɪnˈtens/|The light is intense.
+interfere|干涉|/ˌɪntərˈfɪr/|Do not interfere now.
+internal|内部的|/ɪnˈtɜːrnl/|It is an internal fault.
+interpret|解释|/ɪnˈtɜːrprət/|Interpret the data carefully.
+interrupt|打断|/ˌɪntəˈrʌpt/|Sorry to interrupt you.
+interval|间隔|/ˈɪntərvl/|Check it at intervals.
+invent|发明|/ɪnˈvent/|He invented a small tool.
+invest|投资|/ɪnˈvest/|They invested in training.
+investigate|调查|/ɪnˈvestɪɡeɪt/|We investigated the cause.
+isolate|隔离|/ˈaɪsəleɪt/|Isolate the faulty unit.
+issue|问题|/ˈɪʃuː/|That is a known issue.
+item|项目|/ˈaɪtəm/|Check each item.
+joint|接合处|/dʒɔɪnt/|The joint is loose.
+journey|旅程|/ˈdʒɜːrni/|The journey took hours.
+label|标签|/ˈleɪbl/|Read the label first.
+lack|缺乏|/læk/|We lack spare parts.
+launch|发动|/lɔːntʃ/|They launched the product.
+layer|层|/ˈleɪər/|Add another layer.
+lean|倾斜|/liːn/|The pole leans left.
+leap|跳跃|/liːp/|Sales leaped last month.
+lecture|讲座|/ˈlektʃər/|The lecture was useful.
+legal|合法的|/ˈliːɡl/|It is a legal document.
+leisure|闲暇|/ˈliːʒər/|He has little leisure.
+lend|借出|/lend/|Lend me your tool.
+license|许可证|/ˈlaɪsns/|Renew the license.
+lightning|闪电|/ˈlaɪtnɪŋ/|Lightning hit the line.
+likely|可能的|/ˈlaɪkli/|Rain is likely today.
+liquid|液体|/ˈlɪkwɪd/|The liquid leaked out.
+literature|文学|/ˈlɪtrətʃər/|He studies literature.
+loan|贷款|/loʊn/|The loan was approved.
+locate|定位|/ˈloʊkeɪt/|Locate the fault first.
+logic|逻辑|/ˈlɑːdʒɪk/|His logic is clear.
+loyal|忠诚的|/ˈlɔɪəl/|They are loyal customers.
+luxury|奢侈|/ˈlʌkʃəri/|Time is a luxury.
+maintain|维持|/meɪnˈteɪn/|Maintain the same speed.
+majority|大多数|/məˈdʒɔːrəti/|The majority agreed.
+margin|边缘|/ˈmɑːrdʒɪn/|Leave a wide margin.
+mask|面罩|/mæsk/|Wear a mask inside.
+mature|成熟的|/məˈtʃʊr/|He is mature for his age.
+maximum|最大的|/ˈmæksɪməm/|That is the maximum load.
+mechanical|机械的|/məˈkænɪkl/|It is a mechanical fault.
+medical|医疗的|/ˈmedɪkl/|Medical equipment is costly.
+medium|中等的|/ˈmiːdiəm/|Choose the medium size.
+memory|记忆|/ˈmeməri/|My memory is poor.
+mere|仅仅的|/mɪr/|It is a mere detail.
+merit|优点|/ˈmerɪt/|The plan has merit.
+minimum|最小的|/ˈmɪnɪməm/|Keep it to a minimum.
+minor|次要的|/ˈmaɪnər/|That is a minor issue.
+mission|任务|/ˈmɪʃn/|The mission was clear.
+mixture|混合物|/ˈmɪkstʃər/|It is a strange mixture.
+mode|模式|/moʊd/|Switch to service mode.
+moderate|适度的|/ˈmɑːdərət/|Keep a moderate speed.
+modify|修改|/ˈmɑːdɪfaɪ/|Modify the setting once.
+moral|道德的|/ˈmɔːrəl/|It is a moral question.
+motion|运动|/ˈmoʊʃn/|The motion stopped.
+motive|动机|/ˈmoʊtɪv/|His motive was simple.
+multiply|乘|/ˈmʌltɪplaɪ/|Multiply it by three.
+mutual|相互的|/ˈmjuːtʃuəl/|We share mutual respect.
+narrow|狭窄的|/ˈnæroʊ/|The road is narrow.
+neglect|忽视|/nɪˈɡlekt/|Do not neglect the log.
+negotiate|谈判|/nɪˈɡoʊʃieɪt/|They negotiated the price.
+nervous|紧张的|/ˈnɜːrvəs/|She felt nervous.
+neutral|中立的|/ˈnuːtrəl/|Stay neutral in this.
+nevertheless|然而|/ˌnevərðəˈles/|Nevertheless, we tried.
+obey|服从|/əˈbeɪ/|Obey the safety rules.
+object|物体|/ˈɑːbdʒɪkt/|Move the object aside.
+observe|观察|/əbˈzɜːrv/|Observe it for an hour.
+obtain|获得|/əbˈteɪn/|We obtained the data.
+occasion|场合|/əˈkeɪʒn/|On that occasion, he agreed.
+occupy|占据|/ˈɑːkjupaɪ/|The unit occupies little space.
+odd|奇怪的|/ɑːd/|That is an odd result.
+operate|操作|/ˈɑːpəreɪt/|Operate it carefully.
+oppose|反对|/əˈpoʊz/|They opposed the change.
+optical|光学的|/ˈɑːptɪkl/|Check the optical cable.
+option|选择|/ˈɑːpʃn/|We have one more option.
+order|顺序|/ˈɔːrdər/|Keep them in order.
+ordinary|普通的|/ˈɔːrdneri/|It is an ordinary day.
+origin|起源|/ˈɔːrɪdʒɪn/|Find the origin of it.
+otherwise|否则|/ˈʌðərwaɪz/|Hurry, otherwise we are late.
+outcome|结果|/ˈaʊtkʌm/|The outcome was good.
+output|输出|/ˈaʊtpʊt/|Measure the output voltage.
+overcome|克服|/ˌoʊvərˈkʌm/|We overcame the problem.
+owe|欠|/oʊ/|I owe you a favor.
+pace|步伐|/peɪs/|Keep a steady pace.
+package|包裹|/ˈpækɪdʒ/|The package arrived today.
+participate|参与|/pɑːrˈtɪsɪpeɪt/|Everyone participated.
+particular|特定的|/pərˈtɪkjələr/|Look at this particular case.
+passage|段落|/ˈpæsɪdʒ/|Read the first passage.
+passenger|乘客|/ˈpæsɪndʒər/|The passenger waited.
+passion|热情|/ˈpæʃn/|He works with passion.
+patience|耐心|/ˈpeɪʃns/|This job needs patience.
+pattern|模式|/ˈpætərn/|The fault has a pattern.
+peak|顶峰|/piːk/|Sales hit a peak.
+penalty|处罚|/ˈpenəlti/|There is a late penalty.
+perform|执行|/pərˈfɔːrm/|Perform the test twice.
+permanent|永久的|/ˈpɜːrmənənt/|We need a permanent fix.
+permit|允许|/pərˈmɪt/|The rule permits it.
+persuade|说服|/pərˈsweɪd/|She persuaded the manager.
+physical|身体的|/ˈfɪzɪkl/|It is physical damage.
+pile|堆|/paɪl/|A pile of boxes waits.
+plain|清楚的|/pleɪn/|Say it in plain words.
+plenty|大量|/ˈplenti/|We have plenty of time.
+policy|政策|/ˈpɑːləsi/|The policy changed.
+polish|抛光|/ˈpɑːlɪʃ/|Polish the surface lightly.
+pollution|污染|/pəˈluːʃn/|Pollution got worse.
+portion|部分|/ˈpɔːrʃn/|A small portion is left.
+positive|积极的|/ˈpɑːzətɪv/|The result is positive.
+possess|拥有|/pəˈzes/|He possesses the skill.
+potential|潜在的|/pəˈtenʃl/|There is potential risk.
+pour|倒|/pɔːr/|Pour it slowly.
+poverty|贫困|/ˈpɑːvərti/|Poverty is falling.
+practical|实用的|/ˈpræktɪkl/|Give a practical answer.
+praise|表扬|/preɪz/|The customer praised us.
+precious|珍贵的|/ˈpreʃəs/|Time is precious here.
+predict|预测|/prɪˈdɪkt/|We cannot predict it.
+prefer|更喜欢|/prɪˈfɜːr/|I prefer the old design.
+prepare|准备|/prɪˈper/|Prepare the tools first.
+preserve|保存|/prɪˈzɜːrv/|Preserve the old records.
+press|按|/pres/|Press the button once.
+prevent|防止|/prɪˈvent/|Prevent the fault early.
+previous|先前的|/ˈpriːviəs/|See the previous report.
+primary|主要的|/ˈpraɪmeri/|That is the primary cause.
+principle|原则|/ˈprɪnsəpl/|Follow the same principle.
+priority|优先|/praɪˈɔːrəti/|Safety is the priority.
+private|私人的|/ˈpraɪvət/|This is a private note.
+procedure|程序|/prəˈsiːdʒər/|Follow the procedure.
+process|过程|/ˈprɑːses/|The process takes hours.
+produce|生产|/prəˈduːs/|They produce two models.
+profession|职业|/prəˈfeʃn/|It is a hard profession.
+profit|利润|/ˈprɑːfɪt/|Profit rose slightly.
+progress|进展|/ˈprɑːɡres/|We made good progress.
+project|项目|/ˈprɑːdʒekt/|The project ends in May.
+promote|促进|/prəˈmoʊt/|They promoted him.
+proof|证据|/pruːf/|We need clear proof.
+proper|适当的|/ˈprɑːpər/|Use the proper tool.
+propose|提议|/prəˈpoʊz/|I propose a short test.
+protect|保护|/prəˈtekt/|Protect the cable here.
+prove|证明|/pruːv/|Prove it with data.
+provide|提供|/prəˈvaɪd/|We provide free service.
+publish|出版|/ˈpʌblɪʃ/|They published the report.
+purchase|购买|/ˈpɜːrtʃəs/|The purchase was approved.
+pure|纯的|/pjʊr/|Use pure water only.
+purpose|目的|/ˈpɜːrpəs/|What is the purpose?
+pursue|追求|/pərˈsuː/|He pursued a new job.
+qualify|使合格|/ˈkwɑːlɪfaɪ/|He qualified last year.
+quality|质量|/ˈkwɑːləti/|The quality is stable.
+quantity|数量|/ˈkwɑːntəti/|Order a small quantity.
+quit|放弃|/kwɪt/|He quit the job.
+quote|引用|/kwoʊt/|Quote the exact price.
+radiation|辐射|/ˌreɪdiˈeɪʃn/|Radiation levels are safe.
+random|随机的|/ˈrændəm/|The fault seems random.
+range|范围|/reɪndʒ/|The range is wide.
+rapid|快速的|/ˈræpɪd/|A rapid change happened.
+rare|稀有的|/rer/|This fault is rare.
+rate|比率|/reɪt/|The failure rate is low.
+raw|原始的|/rɔː/|Keep the raw data.
+react|反应|/riˈækt/|The system reacts slowly.
+realize|意识到|/ˈriːəlaɪz/|I realized my mistake.
+reasonable|合理的|/ˈriːznəbl/|The price is reasonable.
+recall|回忆|/rɪˈkɔːl/|I recall that fault.
+receipt|收据|/rɪˈsiːt/|Keep the receipt.
+recent|最近的|/ˈriːsnt/|Read the recent log.
+recognize|认出|/ˈrekəɡnaɪz/|I recognize this pattern.
+recommend|推荐|/ˌrekəˈmend/|I recommend the new one.
+recover|恢复|/rɪˈkʌvər/|The system recovered fast.
+reduce|减少|/rɪˈduːs/|Reduce the noise level.
+refer|参考|/rɪˈfɜːr/|Refer to page ten.
+reflect|反映|/rɪˈflekt/|The data reflects reality.
+refuse|拒绝|/rɪˈfjuːz/|He refused the offer.
+regard|认为|/rɪˈɡɑːrd/|I regard it as safe.
+region|地区|/ˈriːdʒən/|This region is dry.
+register|登记|/ˈredʒɪstər/|Register at the desk.
+regret|后悔|/rɪˈɡret/|I regret the delay.
+regular|定期的|/ˈreɡjələr/|Do a regular check.
+reject|拒绝|/rɪˈdʒekt/|They rejected the part.
+relate|关联|/rɪˈleɪt/|The two faults relate.
+relative|相对的|/ˈrelətɪv/|It is relative to cost.
+release|发布|/rɪˈliːs/|They released a new version.
+relevant|相关的|/ˈreləvənt/|Keep only relevant data.
+relief|缓解|/rɪˈliːf/|It was a great relief.
+rely|依赖|/rɪˈlaɪ/|We rely on this tool.
+remain|保持|/rɪˈmeɪn/|The problem remains.
+remark|评论|/rɪˈmɑːrk/|He made a short remark.
+remind|提醒|/rɪˈmaɪnd/|Remind me tomorrow.
+remote|远程的|/rɪˈmoʊt/|Use remote support.
+repeat|重复|/rɪˈpiːt/|Repeat the test once.
+represent|代表|/ˌreprɪˈzent/|He represents the company.
+reputation|声誉|/ˌrepjuˈteɪʃn/|They have a good reputation.
+request|请求|/rɪˈkwest/|Send a written request.
+require|要求|/rɪˈkwaɪr/|This requires two people.
+rescue|救援|/ˈreskjuː/|The rescue took hours.
+research|研究|/rɪˈsɜːrtʃ/|The research is ongoing.
+reserve|预订|/rɪˈzɜːrv/|Reserve a room for us.
+resist|抵抗|/rɪˈzɪst/|The metal resists heat.
+resource|资源|/ˈriːsɔːrs/|We have few resources.
+respect|尊重|/rɪˈspekt/|They respect his work.
+respond|回应|/rɪˈspɑːnd/|Respond before Friday.
+responsible|负责的|/rɪˈspɑːnsəbl/|He is responsible for it.
+restrict|限制|/rɪˈstrɪkt/|Restrict access to it.
+result|结果|/rɪˈzʌlt/|The result was clear.
+retire|退休|/rɪˈtaɪr/|He retired last year.
+reveal|揭示|/rɪˈviːl/|The test revealed a crack.
+reverse|颠倒|/rɪˈvɜːrs/|Reverse the two wires.
+review|回顾|/rɪˈvjuː/|Review the log again.
+revise|修订|/rɪˈvaɪz/|Revise the manual.
+reward|奖励|/rɪˈwɔːrd/|The reward was small.
+rid|摆脱|/rɪd/|Get rid of the noise.
+rigid|坚硬的|/ˈrɪdʒɪd/|The frame is rigid.
+risk|风险|/rɪsk/|The risk is low.
+role|角色|/roʊl/|He plays a key role.
+rough|粗糙的|/rʌf/|The surface is rough.
+routine|例行|/ruːˈtiːn/|It is a routine check.
+rural|农村的|/ˈrʊrəl/|The hospital is rural.
+satisfy|满足|/ˈsætɪsfaɪ/|The answer satisfied him.
+scale|规模|/skeɪl/|Work on a small scale.
+scarce|稀缺的|/skers/|Spare parts are scarce.
+scatter|散开|/ˈskætər/|Do not scatter the screws.
+scene|场景|/siːn/|The scene was quiet.
+scheme|方案|/skiːm/|The scheme works well.
+scope|范围|/skoʊp/|The scope is limited.
+seal|密封|/siːl/|Seal the box tightly.
+secure|安全的|/sɪˈkjʊr/|The line is secure.
+seek|寻找|/siːk/|Seek help early.
+seize|抓住|/siːz/|Seize the chance.
+select|选择|/sɪˈlekt/|Select the right mode.
+sensible|明智的|/ˈsensəbl/|That is a sensible plan.
+separate|分开的|/ˈsepərət/|Keep them separate.
+sequence|顺序|/ˈsiːkwəns/|Follow the sequence.
+series|系列|/ˈsɪriːz/|A series of faults appeared.
+settle|解决|/ˈsetl/|We settled the issue.
+severe|严重的|/sɪˈvɪr/|The damage is severe.
+shade|阴影|/ʃeɪd/|Work in the shade.
+shallow|浅的|/ˈʃæloʊ/|The box is shallow.
+share|分享|/ʃer/|Share the file with me.
+shelter|庇护所|/ˈʃeltər/|We found shelter.
+shift|轮班|/ʃɪft/|My shift ends at six.
+shortage|短缺|/ˈʃɔːrtɪdʒ/|There is a part shortage.
+sight|视野|/saɪt/|Keep it in sight.
+signature|签名|/ˈsɪɡnətʃər/|We need your signature.
+significant|重要的|/sɪɡˈnɪfɪkənt/|There is a significant delay.
+similar|相似的|/ˈsɪmələr/|The case is similar.
+sincere|真诚的|/sɪnˈsɪr/|He gave a sincere reply.
+situation|情况|/ˌsɪtʃuˈeɪʃn/|The situation improved.
+skill|技能|/skɪl/|This job needs skill.
+slight|轻微的|/slaɪt/|There is a slight delay.
+smooth|平滑的|/smuːð/|The motion is smooth.
+society|社会|/səˈsaɪəti/|Society changes slowly.
+solid|固体的|/ˈsɑːlɪd/|The base is solid.
+solution|解决方案|/səˈluːʃn/|We found a solution.
+source|来源|/sɔːrs/|Find the noise source.
+species|物种|/ˈspiːʃiːz/|A rare species lives here.
+specific|具体的|/spəˈsɪfɪk/|Give a specific example.
+spill|溢出|/spɪl/|Do not spill the liquid.
+spirit|精神|/ˈspɪrɪt/|Team spirit matters.
+split|分开|/splɪt/|Split the work in two.
+spot|地点|/spɑːt/|This is the right spot.
+spread|传播|/spred/|The news spread fast.
+squeeze|挤压|/skwiːz/|Squeeze the tube gently.
+stable|稳定的|/ˈsteɪbl/|The reading is stable.
+staff|员工|/stæf/|The staff arrived early.
+stage|阶段|/steɪdʒ/|We are at stage two.
+standard|标准|/ˈstændərd/|It meets the standard.
+stare|凝视|/ster/|He stared at the screen.
+statement|陈述|/ˈsteɪtmənt/|Sign the statement.
+status|状态|/ˈsteɪtəs/|Check the current status.
+steady|稳定的|/ˈstedi/|Keep a steady hand.
+steep|陡的|/stiːp/|The rise is steep.
+stick|坚持|/stɪk/|Stick to the plan.
+stiff|僵硬的|/stɪf/|The switch feels stiff.
+stock|库存|/stɑːk/|The part is in stock.
+strain|拉紧|/streɪn/|Do not strain the cable.
+strategy|策略|/ˈstrætədʒi/|We need a new strategy.
+stretch|伸展|/stretʃ/|Stretch the belt slightly.
+strict|严格的|/strɪkt/|The rule is strict.
+structure|结构|/ˈstrʌktʃər/|The structure is simple.
+struggle|挣扎|/ˈstrʌɡl/|He struggled with it.
+stubborn|固执的|/ˈstʌbərn/|The bolt is stubborn.
+submit|提交|/səbˈmɪt/|Submit the form today.
+substance|物质|/ˈsʌbstəns/|The substance is safe.
+substitute|替代|/ˈsʌbstɪtuːt/|Use a substitute part.
+succeed|成功|/səkˈsiːd/|We succeeded at last.
+sudden|突然的|/ˈsʌdn/|There was a sudden stop.
+suffer|遭受|/ˈsʌfər/|The unit suffered damage.
+suggest|建议|/səɡˈdʒest/|I suggest a short break.
+suit|适合|/suːt/|The plan suits us.
+summary|总结|/ˈsʌməri/|Write a short summary.
+supply|供应|/səˈplaɪ/|The supply is stable.
+suppose|假设|/səˈpoʊz/|Suppose it fails again.
+surface|表面|/ˈsɜːrfɪs/|Clean the surface first.
+surround|包围|/səˈraʊnd/|Trees surround the site.
+survey|调查|/ˈsɜːrveɪ/|We ran a short survey.
+survive|幸存|/sərˈvaɪv/|The board survived the surge.
+suspect|怀疑|/səˈspekt/|I suspect the connector.
+sweep|扫|/swiːp/|Sweep the floor first.
+symbol|符号|/ˈsɪmbl/|This symbol means power.
+sympathy|同情|/ˈsɪmpəθi/|He showed sympathy.
+talent|才能|/ˈtælənt/|She has real talent.
+tap|轻拍|/tæp/|Tap the screen once.
+target|目标|/ˈtɑːrɡɪt/|We hit the target.
+task|任务|/tæsk/|Finish this task first.
+technique|技术|/tekˈniːk/|The technique is old.
+technology|科技|/tekˈnɑːlədʒi/|Technology moves fast.
+temporary|临时的|/ˈtempəreri/|It is a temporary fix.
+tend|倾向|/tend/|Faults tend to repeat.
+tense|紧张的|/tens/|The room felt tense.
+term|术语|/tɜːrm/|Explain the term.
+terrible|可怕的|/ˈterəbl/|The noise is terrible.
+theory|理论|/ˈθɪri/|The theory is simple.
+therefore|因此|/ˈðerfɔːr/|Therefore we stopped.
+thorough|彻底的|/ˈθɜːroʊ/|Do a thorough check.
+threat|威胁|/θret/|Heat is a real threat.
+thus|因此|/ðʌs/|Thus the fault returned.
+tight|紧的|/taɪt/|The bolt is tight.
+tiny|微小的|/ˈtaɪni/|A tiny crack appeared.
+tip|提示|/tɪp/|Here is a useful tip.
+tone|语气|/toʊn/|His tone was calm.
+tough|艰难的|/tʌf/|It was a tough day.
+trace|追踪|/treɪs/|Trace the cable back.
+track|轨道|/træk/|Keep track of the time.
+trade|贸易|/treɪd/|Trade grew last year.
+tradition|传统|/trəˈdɪʃn/|It is an old tradition.
+traffic|交通|/ˈtræfɪk/|Traffic was heavy.
+transfer|转移|/trænsˈfɜːr/|Transfer the data first.
+transport|运输|/ˈtrænspɔːrt/|Transport takes two days.
+treat|对待|/triːt/|Treat it with care.
+trend|趋势|/trend/|The trend is clear.
+trial|试验|/ˈtraɪəl/|Run a short trial.
+trigger|触发|/ˈtrɪɡər/|Heat triggers the alarm.
+trust|信任|/trʌst/|I trust his judgment.
+truth|真相|/truːθ/|Tell me the truth.
+typical|典型的|/ˈtɪpɪkl/|It is a typical fault.
+ultimate|最终的|/ˈʌltɪmət/|That is the ultimate goal.
+unable|不能的|/ʌnˈeɪbl/|We were unable to start.
+unique|独特的|/juˈniːk/|Each case is unique.
+unite|联合|/juˈnaɪt/|The teams united.
+universal|普遍的|/ˌjuːnɪˈvɜːrsl/|It is a universal rule.
+unless|除非|/ənˈles/|Wait unless it beeps.
+upset|心烦的|/ʌpˈset/|The delay upset him.
+urban|城市的|/ˈɜːrbən/|Urban traffic is heavy.
+urge|催促|/ɜːrdʒ/|I urge you to check.
+urgent|紧急的|/ˈɜːrdʒənt/|This is an urgent case.
+usual|通常的|/ˈjuːʒuəl/|It is the usual problem.
+vacant|空的|/ˈveɪkənt/|The room is vacant.
+vague|模糊的|/veɪɡ/|His answer was vague.
+valid|有效的|/ˈvælɪd/|The ticket is valid.
+value|价值|/ˈvæljuː/|The value is high.
+vanish|消失|/ˈvænɪʃ/|The fault vanished.
+variety|多样性|/vəˈraɪəti/|We have a variety of tools.
+various|各种的|/ˈveriəs/|Various parts are missing.
+vary|变化|/ˈveri/|Results vary by day.
+vast|广大的|/væst/|A vast area was covered.
+vehicle|车辆|/ˈviːəkl/|The vehicle is ready.
+venture|冒险|/ˈventʃər/|It was a new venture.
+violent|暴力的|/ˈvaɪələnt/|A violent storm came.
+virtue|美德|/ˈvɜːrtʃuː/|Patience is a virtue.
+visible|可见的|/ˈvɪzəbl/|The crack is visible.
+vision|视力|/ˈvɪʒn/|His vision is good.
+visual|视觉的|/ˈvɪʒuəl/|Do a visual check.
+vital|至关重要的|/ˈvaɪtl/|Timing is vital.
+volume|音量|/ˈvɑːljuːm/|Turn the volume down.
+vote|投票|/voʊt/|We took a vote.
+warn|警告|/wɔːrn/|I warned him twice.
+waste|浪费|/weɪst/|Do not waste time.
+weaken|削弱|/ˈwiːkən/|Heat weakens the joint.
+wealth|财富|/welθ/|Wealth is not the goal.
+weigh|称重|/weɪ/|Weigh the part first.
+welfare|福利|/ˈwelfer/|Staff welfare matters.
+whereas|然而|/werˈæz/|He waited, whereas she left.
+whisper|低语|/ˈwɪspər/|He whispered the answer.
+wisdom|智慧|/ˈwɪzdəm/|Experience brings wisdom.
+withdraw|撤回|/wɪðˈdrɔː/|They withdrew the offer.
+witness|目击者|/ˈwɪtnəs/|He was a witness.
+worth|值得|/wɜːrθ/|It is worth trying.
+youth|青年|/juːθ/|He works with youth.
+zone|区域|/zoʊn/|Enter the safe zone.
+`;
+
+/* CET-6 精选 · word|中文|音标|例句 */
+const CET6_RAW = `
+abandon|放弃|/əˈbændən/|They abandoned the old plan.
+abolish|废除|/əˈbɑːlɪʃ/|The rule was abolished.
+absurd|荒唐的|/əbˈsɜːrd/|That idea sounds absurd.
+accelerate|加速|/əkˈseləreɪt/|The car accelerated fast.
+accommodate|容纳|/əˈkɑːmədeɪt/|The room accommodates ten people.
+accumulate|积累|/əˈkjuːmjəleɪt/|Dust accumulated on it.
+adequate|充足的|/ˈædɪkwət/|The light is adequate.
+adjacent|邻近的|/əˈdʒeɪsnt/|The adjacent room is empty.
+advocate|提倡|/ˈædvəkeɪt/|He advocates a slower pace.
+allocate|分配|/ˈæləkeɪt/|Allocate the budget carefully.
+ambiguous|模棱两可的|/æmˈbɪɡjuəs/|The answer was ambiguous.
+ample|充足的|/ˈæmpl/|There is ample space.
+anticipate|预料|/ænˈtɪsɪpeɪt/|We anticipate some delay.
+apparatus|器械|/ˌæpəˈrætəs/|The apparatus is heavy.
+arbitrary|任意的|/ˈɑːrbɪtreri/|The choice looks arbitrary.
+articulate|清晰表达|/ɑːrˈtɪkjuleɪt/|She articulated her view.
+assemble|组装|/əˈsembl/|They assembled the parts.
+assess|评估|/əˈses/|We assessed the risk.
+assumption|假设|/əˈsʌmpʃn/|That is a weak assumption.
+authentic|真实的|/ɔːˈθentɪk/|This is an authentic report.
+bias|偏见|/ˈbaɪəs/|The test shows bias.
+brittle|易碎的|/ˈbrɪtl/|The plastic became brittle.
+cautious|谨慎的|/ˈkɔːʃəs/|Be cautious with the wires.
+coherent|连贯的|/koʊˈhɪrənt/|He gave a coherent answer.
+coincide|巧合|/ˌkoʊɪnˈsaɪd/|The two dates coincide.
+compensate|补偿|/ˈkɑːmpenseɪt/|They compensated the loss.
+competent|胜任的|/ˈkɑːmpɪtənt/|She is a competent engineer.
+comply|遵从|/kəmˈplaɪ/|We comply with the rule.
+comprehensive|全面的|/ˌkɑːmprɪˈhensɪv/|A comprehensive check is needed.
+compromise|妥协|/ˈkɑːmprəmaɪz/|They reached a compromise.
+consensus|共识|/kənˈsensəs/|There is no consensus yet.
+consequently|因此|/ˈkɑːnsɪkwentli/|Consequently, we stopped.
+constitute|构成|/ˈkɑːnstɪtuːt/|These parts constitute a set.
+contaminate|污染|/kənˈtæmɪneɪt/|The water was contaminated.
+contemporary|当代的|/kənˈtempəreri/|This is contemporary design.
+contradict|反驳|/ˌkɑːntrəˈdɪkt/|The data contradicts him.
+controversy|争议|/ˈkɑːntrəvɜːrsi/|The plan caused controversy.
+correlate|关联|/ˈkɔːrəleɪt/|The two results correlate.
+crucial|关键的|/ˈkruːʃl/|Timing is crucial here.
+cumulative|累积的|/ˈkjuːmjəleɪtɪv/|The cumulative effect is large.
+deliberate|故意的|/dɪˈlɪbərət/|It was a deliberate choice.
+deteriorate|恶化|/dɪˈtɪriəreɪt/|The image deteriorated.
+deviate|偏离|/ˈdiːvieɪt/|Do not deviate from the plan.
+diminish|减少|/dɪˈmɪnɪʃ/|The noise diminished.
+discrepancy|差异|/dɪsˈkrepənsi/|There is a discrepancy here.
+dispose|处置|/dɪˈspoʊz/|Dispose of the old parts.
+distinguish|区分|/dɪˈstɪŋɡwɪʃ/|Distinguish cause from effect.
+dominate|支配|/ˈdɑːmɪneɪt/|One brand dominates the market.
+durable|耐用的|/ˈdʊrəbl/|The cover is durable.
+elaborate|详尽的|/ɪˈlæbərət/|He gave an elaborate answer.
+eligible|有资格的|/ˈelɪdʒəbl/|You are eligible to apply.
+eliminate|消除|/ɪˈlɪmɪneɪt/|We eliminated the noise.
+emerge|出现|/ɪˈmɜːrdʒ/|A new problem emerged.
+empirical|经验的|/ɪmˈpɪrɪkl/|We need empirical data.
+endorse|认可|/ɪnˈdɔːrs/|The team endorsed the plan.
+enhance|提高|/ɪnˈhæns/|This enhances the image.
+equivalent|等同的|/ɪˈkwɪvələnt/|It is equivalent to ten units.
+essence|本质|/ˈesns/|That is the essence of it.
+exaggerate|夸大|/ɪɡˈzædʒəreɪt/|Do not exaggerate the risk.
+exceed|超过|/ɪkˈsiːd/|Costs exceeded the budget.
+explicit|明确的|/ɪkˈsplɪsɪt/|Give explicit instructions.
+exploit|利用|/ɪkˈsplɔɪt/|They exploited the weakness.
+feasible|可行的|/ˈfiːzəbl/|The plan is feasible.
+fluctuate|波动|/ˈflʌktʃueɪt/|The voltage fluctuates.
+formulate|制定|/ˈfɔːrmjuleɪt/|We formulated a new rule.
+fragile|脆弱的|/ˈfrædʒl/|The glass part is fragile.
+framework|框架|/ˈfreɪmwɜːrk/|We built a simple framework.
+hypothesis|假设|/haɪˈpɑːθəsɪs/|Test the hypothesis first.
+implement|实施|/ˈɪmplɪment/|They implemented the change.
+implicit|含蓄的|/ɪmˈplɪsɪt/|The meaning is implicit.
+incentive|激励|/ɪnˈsentɪv/|There is no incentive.
+incorporate|纳入|/ɪnˈkɔːrpəreɪt/|We incorporated your idea.
+indispensable|不可缺少的|/ˌɪndɪˈspensəbl/|This tool is indispensable.
+inevitable|不可避免的|/ɪnˈevɪtəbl/|Delay was inevitable.
+inherent|固有的|/ɪnˈhɪrənt/|There is an inherent risk.
+initiate|发起|/ɪˈnɪʃieɪt/|They initiated the process.
+integrate|整合|/ˈɪntɪɡreɪt/|Integrate the two systems.
+integrity|正直|/ɪnˈteɡrəti/|He is known for integrity.
+intervene|干预|/ˌɪntərˈviːn/|The manager intervened.
+intrinsic|内在的|/ɪnˈtrɪnzɪk/|It has intrinsic value.
+justify|证明合理|/ˈdʒʌstɪfaɪ/|Justify the extra cost.
+legitimate|合法的|/lɪˈdʒɪtɪmət/|That is a legitimate reason.
+magnitude|量级|/ˈmæɡnɪtuːd/|The magnitude surprised us.
+manipulate|操纵|/məˈnɪpjuleɪt/|He manipulated the data.
+marginal|边缘的|/ˈmɑːrdʒɪnl/|The gain was marginal.
+mediate|调解|/ˈmiːdieɪt/|She mediated the dispute.
+mitigate|缓解|/ˈmɪtɪɡeɪt/|We must mitigate the risk.
+negligible|微不足道的|/ˈneɡlɪdʒəbl/|The error is negligible.
+notion|概念|/ˈnoʊʃn/|He rejected that notion.
+obsolete|过时的|/ˌɑːbsəˈliːt/|The model is obsolete.
+optimal|最优的|/ˈɑːptɪməl/|Find the optimal setting.
+paradigm|范式|/ˈpærədaɪm/|A new paradigm appeared.
+persistent|持续的|/pərˈsɪstənt/|It is a persistent fault.
+phenomenon|现象|/fəˈnɑːmɪnən/|This is a common phenomenon.
+precise|精确的|/prɪˈsaɪs/|Give a precise value.
+preliminary|初步的|/prɪˈlɪmɪneri/|These are preliminary results.
+prevail|盛行|/prɪˈveɪl/|Old habits still prevail.
+prohibit|禁止|/prəˈhɪbɪt/|Smoking is prohibited.
+prominent|突出的|/ˈprɑːmɪnənt/|He is a prominent expert.
+prospect|前景|/ˈprɑːspekt/|The prospect looks good.
+redundant|多余的|/rɪˈdʌndənt/|That step is redundant.
+refine|精炼|/rɪˈfaɪn/|We refined the method.
+reinforce|加强|/ˌriːɪnˈfɔːrs/|Reinforce the weak part.
+reluctant|不情愿的|/rɪˈlʌktənt/|He was reluctant to sign.
+resilient|有韧性的|/rɪˈzɪliənt/|The system is resilient.
+retain|保留|/rɪˈteɪn/|Retain the old records.
+rigorous|严格的|/ˈrɪɡərəs/|They run rigorous tests.
+robust|稳健的|/roʊˈbʌst/|The design is robust.
+scrutiny|审查|/ˈskruːtəni/|The plan faced scrutiny.
+simulate|模拟|/ˈsɪmjuleɪt/|We simulated the fault.
+sophisticated|复杂精密的|/səˈfɪstɪkeɪtɪd/|It is a sophisticated tool.
+stimulate|刺激|/ˈstɪmjuleɪt/|This stimulates growth.
+subsequent|随后的|/ˈsʌbsɪkwənt/|Subsequent tests were fine.
+substantial|大量的|/səbˈstænʃl/|A substantial part is done.
+sufficient|充足的|/səˈfɪʃnt/|We have sufficient time.
+supplement|补充|/ˈsʌplɪment/|Supplement it with data.
+sustain|维持|/səˈsteɪn/|They sustained the effort.
+threshold|门槛|/ˈθreʃhoʊld/|The threshold is too high.
+transmit|传输|/trænsˈmɪt/|The unit transmits data.
+undergo|经历|/ˌʌndərˈɡoʊ/|The device underwent testing.
+underlying|潜在的|/ˌʌndərˈlaɪɪŋ/|Find the underlying cause.
+validate|验证|/ˈvælɪdeɪt/|Validate the result twice.
+versatile|多功能的|/ˈvɜːrsətl/|It is a versatile tool.
+viable|可行的|/ˈvaɪəbl/|That is a viable option.
+vulnerable|脆弱的|/ˈvʌlnərəbl/|The system is vulnerable.
+yield|产生|/jiːld/|The test yielded good data.
+abundant|丰富的|/əˈbʌndənt/|Abundant data is available.
+accessible|可接近的|/əkˈsesəbl/|The panel is accessible.
+acknowledge|承认|/əkˈnɑːlɪdʒ/|He acknowledged the error.
+acquisition|获得|/ˌækwɪˈzɪʃn/|The acquisition took months.
+adhere|坚持|/ədˈhɪr/|Adhere to the standard.
+administer|管理|/ədˈmɪnɪstər/|They administer the system.
+affirm|肯定|/əˈfɜːrm/|He affirmed the result.
+aggregate|总计|/ˈæɡrɪɡət/|The aggregate cost is high.
+alleviate|减轻|/əˈliːvieɪt/|This alleviates the load.
+allege|宣称|/əˈledʒ/|They allege a defect.
+amend|修正|/əˈmend/|Amend the contract.
+analogy|类比|/əˈnælədʒi/|He drew an analogy.
+anonymous|匿名的|/əˈnɑːnɪməs/|The report was anonymous.
+appraise|评估|/əˈpreɪz/|Appraise the damage first.
+arouse|唤起|/əˈraʊz/|It aroused interest.
+ascend|上升|/əˈsend/|The line ascends slowly.
+aspire|渴望|/əˈspaɪr/|He aspires to lead.
+assert|断言|/əˈsɜːrt/|She asserted her view.
+assimilate|吸收|/əˈsɪməleɪt/|He assimilated the rules.
+attain|达到|/əˈteɪn/|We attained the target.
+attribute|归因于|/əˈtrɪbjuːt/|Attribute it to heat.
+beneficial|有益的|/ˌbenɪˈfɪʃl/|Rest is beneficial.
+blur|模糊|/blɜːr/|The image blurred.
+boost|提升|/buːst/|This boosts the output.
+breach|违反|/briːtʃ/|That is a breach of rules.
+cease|停止|/siːs/|The noise ceased.
+certify|证明|/ˈsɜːrtɪfaɪ/|The lab certified it.
+circulate|循环|/ˈsɜːrkjəleɪt/|Water circulates inside.
+clarity|清晰|/ˈklærəti/|The image lacks clarity.
+cluster|群集|/ˈklʌstər/|Faults cluster at night.
+collide|碰撞|/kəˈlaɪd/|The two carts collided.
+commence|开始|/kəˈmens/|Work commences Monday.
+commodity|商品|/kəˈmɑːdəti/|Steel is a commodity.
+compatible|兼容的|/kəmˈpætəbl/|The parts are compatible.
+compel|迫使|/kəmˈpel/|The rule compels us.
+compile|编译|/kəmˈpaɪl/|Compile the report.
+complement|补充|/ˈkɑːmplɪment/|The two complement each other.
+compress|压缩|/kəmˈpres/|Compress the file first.
+conceal|隐藏|/kənˈsiːl/|Do not conceal the fault.
+concede|承认|/kənˈsiːd/|He conceded the point.
+condense|浓缩|/kənˈdens/|Water condenses on it.
+confine|限制|/kənˈfaɪn/|Confine it to one room.
+conform|符合|/kənˈfɔːrm/|It conforms to the rule.
+consecutive|连续的|/kənˈsekjətɪv/|Three consecutive failures.
+conserve|保存|/kənˈsɜːrv/|Conserve the battery.
+consolidate|巩固|/kənˈsɑːlɪdeɪt/|Consolidate the records.
+conspicuous|显眼的|/kənˈspɪkjuəs/|Mark it in a conspicuous place.
+converge|汇聚|/kənˈvɜːrdʒ/|The lines converge here.
+counterpart|对应者|/ˈkaʊntərpɑːrt/|Ask your counterpart there.
+credible|可信的|/ˈkredəbl/|The claim is credible.
+criterion|标准|/kraɪˈtɪriən/|What is the criterion?
+curb|抑制|/kɜːrb/|Curb the extra cost.
+decisive|决定性的|/dɪˈsaɪsɪv/|That was a decisive test.
+decline|下降|/dɪˈklaɪn/|Sales declined slightly.
+dedicate|致力于|/ˈdedɪkeɪt/|He dedicated a day to it.
+default|默认|/dɪˈfɔːlt/|Use the default setting.
+deficiency|缺乏|/dɪˈfɪʃnsi/|A power deficiency appeared.
+defy|违抗|/dɪˈfaɪ/|The result defies logic.
+delegate|委派|/ˈdelɪɡeɪt/|Delegate the task today.
+denote|表示|/dɪˈnoʊt/|The red light denotes a fault.
+depict|描绘|/dɪˈpɪkt/|The chart depicts the trend.
+deprive|剥夺|/dɪˈpraɪv/|Do not deprive him of rest.
+derive|得出|/dɪˈraɪv/|The value derives from tests.
+descend|下降|/dɪˈsend/|The table descends slowly.
+designate|指定|/ˈdezɪɡneɪt/|Designate one contact.
+detach|拆下|/dɪˈtætʃ/|Detach the cable first.
+deter|阻止|/dɪˈtɜːr/|Cost deters many buyers.
+devise|设计|/dɪˈvaɪz/|We devised a quick fix.
+diagnose|诊断|/ˈdaɪəɡnoʊs/|Diagnose the fault first.
+differentiate|区分|/ˌdɪfəˈrenʃieɪt/|Differentiate the two models.
+discard|丢弃|/dɪsˈkɑːrd/|Discard the old seal.
+discern|辨别|/dɪˈsɜːrn/|I can discern a pattern.
+disclose|披露|/dɪsˈkloʊz/|They disclosed the cause.
+dispatch|派遣|/dɪˈspætʃ/|We dispatched an engineer.
+disperse|驱散|/dɪˈspɜːrs/|The crowd dispersed.
+displace|取代|/dɪsˈpleɪs/|New tools displace old ones.
+disrupt|扰乱|/dɪsˈrʌpt/|The fault disrupted work.
+diverse|多样的|/daɪˈvɜːrs/|The team is diverse.
+divert|转移|/daɪˈvɜːrt/|Divert the flow here.
+drastic|激烈的|/ˈdræstɪk/|A drastic change is risky.
+dubious|可疑的|/ˈduːbiəs/|The data looks dubious.
+elapse|流逝|/ɪˈlæps/|Two hours elapsed.
+elevate|提升|/ˈelɪveɪt/|Elevate the table slowly.
+emit|发出|/ɪˈmɪt/|The unit emits heat.
+encounter|遇到|/ɪnˈkaʊntər/|We encountered a fault.
+enforce|执行|/ɪnˈfɔːrs/|Enforce the safety rule.
+entail|需要|/ɪnˈteɪl/|This entails extra work.
+erect|竖立|/ɪˈrekt/|They erected the frame.
+evacuate|疏散|/ɪˈvækjueɪt/|Evacuate the room first.
+evoke|唤起|/ɪˈvoʊk/|The sound evokes memory.
+exclude|排除|/ɪkˈskluːd/|Exclude that option.
+execute|执行|/ˈeksɪkjuːt/|Execute the plan today.
+exempt|免除|/ɪɡˈzempt/|He is exempt from it.
+exert|施加|/ɪɡˈzɜːrt/|Do not exert force.
+exhaust|耗尽|/ɪɡˈzɔːst/|We exhausted every option.
+extract|提取|/ɪkˈstrækt/|Extract the data first.
+fabricate|捏造|/ˈfæbrɪkeɪt/|Do not fabricate data.
+facilitate|促进|/fəˈsɪlɪteɪt/|This facilitates repair.
+fatigue|疲劳|/fəˈtiːɡ/|Metal fatigue caused it.
+foster|培养|/ˈfɔːstər/|Foster good habits.
+fraction|部分|/ˈfrækʃn/|A fraction of the cost.
+generic|通用的|/dʒəˈnerɪk/|Use the generic version.
+halt|停止|/hɔːlt/|The line came to a halt.
+hamper|妨碍|/ˈhæmpər/|Rain hampered the work.
+hinder|阻碍|/ˈhɪndər/|Dust hinders cooling.
+identical|相同的|/aɪˈdentɪkl/|The two are identical.
+ignite|点燃|/ɪɡˈnaɪt/|A spark can ignite it.
+illuminate|照亮|/ɪˈluːmɪneɪt/|Illuminate the panel.
+imminent|即将发生的|/ˈɪmɪnənt/|Failure is imminent.
+impair|损害|/ɪmˈper/|Dust impairs the image.
+implication|含义|/ˌɪmplɪˈkeɪʃn/|Consider the implication.
+incline|倾向|/ɪnˈklaɪn/|I incline to wait.
+induce|引起|/ɪnˈduːs/|Heat induces the fault.
+infer|推断|/ɪnˈfɜːr/|We infer a loose joint.
+infinite|无限的|/ˈɪnfɪnət/|Time is not infinite.
+infrastructure|基础设施|/ˈɪnfrəstrʌktʃər/|The infrastructure is old.
+ingenious|巧妙的|/ɪnˈdʒiːniəs/|That is an ingenious fix.
+inhibit|抑制|/ɪnˈhɪbɪt/|Cold inhibits the reaction.
+innovative|创新的|/ˈɪnəveɪtɪv/|It is an innovative design.
+insight|洞察|/ˈɪnsaɪt/|His insight helped us.
+inspect|检查|/ɪnˈspekt/|Inspect the joint closely.
+intact|完好的|/ɪnˈtækt/|The seal is intact.
+intensify|加强|/ɪnˈtensɪfaɪ/|The noise intensified.
+intermittent|间歇的|/ˌɪntərˈmɪtnt/|It is an intermittent fault.
+intricate|复杂的|/ˈɪntrɪkət/|The wiring is intricate.
+invalid|无效的|/ɪnˈvælɪd/|The code is invalid.
+irrelevant|不相关的|/ɪˈreləvənt/|That data is irrelevant.
+lag|滞后|/læɡ/|The display lags a little.
+latent|潜在的|/ˈleɪtnt/|A latent defect appeared.
+liable|有责任的|/ˈlaɪəbl/|We are liable for it.
+linger|逗留|/ˈlɪŋɡər/|The smell lingered.
+mandatory|强制的|/ˈmændətɔːri/|The check is mandatory.
+manifest|显现|/ˈmænɪfest/|The fault manifests at night.
+merge|合并|/mɜːrdʒ/|Merge the two files.
+meticulous|细致的|/məˈtɪkjələs/|He is meticulous with logs.
+minimize|最小化|/ˈmɪnɪmaɪz/|Minimize the downtime.
+momentum|势头|/moʊˈmentəm/|The project lost momentum.
+nominal|名义上的|/ˈnɑːmɪnl/|The cost is nominal.
+norm|标准|/nɔːrm/|That is the norm here.
+nuisance|麻烦事|/ˈnuːsns/|The noise is a nuisance.
+oblige|迫使|/əˈblaɪdʒ/|The rule obliges us.
+obscure|模糊的|/əbˈskjʊr/|The label is obscure.
+offset|抵消|/ˈɔːfset/|Savings offset the cost.
+onset|开始|/ˈɑːnset/|The onset was sudden.
+outlook|前景|/ˈaʊtlʊk/|The outlook is stable.
+overlap|重叠|/ˌoʊvərˈlæp/|The two tasks overlap.
+overlook|忽略|/ˌoʊvərˈlʊk/|Do not overlook the log.
+overwhelm|压倒|/ˌoʊvərˈwelm/|The work overwhelmed him.
+parallel|平行的|/ˈpærəlel/|Run the two in parallel.
+peculiar|奇特的|/pɪˈkjuːliər/|A peculiar noise appeared.
+penetrate|穿透|/ˈpenətreɪt/|Water penetrated the case.
+perceive|察觉|/pərˈsiːv/|I perceive a small delay.
+peripheral|外围的|/pəˈrɪfərəl/|Check the peripheral units.
+plausible|合理的|/ˈplɔːzəbl/|That is a plausible cause.
+postpone|推迟|/poʊˈspoʊn/|We postponed the visit.
+precaution|预防措施|/prɪˈkɔːʃn/|Take simple precautions.
+precede|先于|/prɪˈsiːd/|A warning preceded it.
+presume|推测|/prɪˈzuːm/|I presume it is fixed.
+prevalent|普遍的|/ˈprevələnt/|The fault is prevalent.
+proficient|熟练的|/prəˈfɪʃnt/|She is proficient with it.
+profound|深刻的|/prəˈfaʊnd/|It had a profound effect.
+prone|易于…的|/proʊn/|The seal is prone to wear.
+proportion|比例|/prəˈpɔːrʃn/|A large proportion failed.
+provoke|激起|/prəˈvoʊk/|Heat provokes the alarm.
+radical|激进的|/ˈrædɪkl/|A radical change is risky.
+ratio|比率|/ˈreɪʃioʊ/|The ratio is two to one.
+rational|理性的|/ˈræʃnəl/|Give a rational answer.
+reassure|使安心|/ˌriːəˈʃʊr/|Reassure the customer.
+reckon|认为|/ˈrekən/|I reckon it will hold.
+reconcile|调和|/ˈrekənsaɪl/|Reconcile the two records.
+recur|再发生|/rɪˈkɜːr/|The fault recurs weekly.
+render|使成为|/ˈrendər/|Water rendered it useless.
+renew|更新|/rɪˈnuː/|Renew the contract.
+replicate|复制|/ˈreplɪkeɪt/|We replicated the fault.
+resemble|类似|/rɪˈzembl/|It resembles the old model.
+residue|残留物|/ˈrezɪduː/|Clean the residue away.
+resolve|解决|/rɪˈzɑːlv/|We resolved the issue.
+restore|恢复|/rɪˈstɔːr/|Restore the old setting.
+restrain|抑制|/rɪˈstreɪn/|Restrain the cable here.
+retrieve|取回|/rɪˈtriːv/|Retrieve the log file.
+revive|复苏|/rɪˈvaɪv/|The unit revived after reset.
+rupture|破裂|/ˈrʌptʃər/|The hose ruptured.
+shrink|收缩|/ʃrɪŋk/|The seal shrinks in cold.
+signify|表示|/ˈsɪɡnɪfaɪ/|Red signifies danger.
+skeptical|怀疑的|/ˈskeptɪkl/|I am skeptical about it.
+sparse|稀疏的|/spɑːrs/|The data is sparse.
+spectrum|范围|/ˈspektrəm/|A wide spectrum of faults.
+speculate|推测|/ˈspekjuleɪt/|Do not speculate yet.
+stipulate|规定|/ˈstɪpjuleɪt/|The contract stipulates it.
+strive|努力|/straɪv/|We strive for accuracy.
+subtle|微妙的|/ˈsʌtl/|The difference is subtle.
+supersede|取代|/ˌsuːpərˈsiːd/|A new model supersedes it.
+surpass|超过|/sərˈpæs/|It surpassed our target.
+surveillance|监视|/sərˈveɪləns/|Surveillance cameras run all day.
+susceptible|易受影响的|/səˈseptəbl/|The board is susceptible to dust.
+suspend|暂停|/səˈspend/|They suspended the work.
+tackle|处理|/ˈtækl/|Tackle the main fault first.
+tedious|乏味的|/ˈtiːdiəs/|The check is tedious.
+tentative|暂定的|/ˈtentətɪv/|That is a tentative date.
+terminate|终止|/ˈtɜːrmɪneɪt/|Terminate the process.
+transition|过渡|/trænˈzɪʃn/|The transition was smooth.
+transparent|透明的|/trænsˈpærənt/|The cover is transparent.
+trivial|琐碎的|/ˈtrɪviəl/|That is a trivial detail.
+uncover|揭露|/ʌnˈkʌvər/|We uncovered the cause.
+underestimate|低估|/ˌʌndərˈestɪmeɪt/|Do not underestimate it.
+undermine|破坏|/ˌʌndərˈmaɪn/|Delays undermine trust.
+uniform|统一的|/ˈjuːnɪfɔːrm/|Keep a uniform standard.
+utilize|利用|/ˈjuːtəlaɪz/|Utilize the spare time.
+vacuum|真空|/ˈvækjuːm/|Check the vacuum level.
+verify|核实|/ˈverɪfaɪ/|Verify the reading twice.
+vicinity|附近|/vəˈsɪnəti/|Nothing in the vicinity moved.
+violate|违反|/ˈvaɪəleɪt/|That violates the rule.
+virtual|虚拟的|/ˈvɜːrtʃuəl/|Use the virtual console.
+withstand|承受|/wɪðˈstænd/|It withstands high heat.
+`;
+
+const SENTS = [
+["The engineer replaced the damaged coil yesterday.",
+ "这个 工程师 替换了 那个 损坏的 线圈 昨天。",
+ "工程师昨天更换了损坏的线圈。"],
+["The hospital reported a fault this morning.",
+ "那家 医院 报修了 一个 故障 今天 早上。",
+ "医院今天早上报修了一个故障。"],
+["Our engineer will arrive at the site in two hours.",
+ "我们的 工程师 将要 到达 在 那个 现场 在 两 小时 内。",
+ "我们的工程师两小时内到现场。"],
+["The equipment stopped because the power module failed.",
+ "这台 设备 停止了 因为 那个 电源 模块 失效了。",
+ "设备停机了，因为电源模块坏了。"],
+["We are still waiting for the spare part.",
+ "我们 正在 仍然 等待 那个 备用的 部件。",
+ "我们还在等备件。"],
+["Please send the spare coil to the hospital tomorrow.",
+ "请 寄 那个 备用的 线圈 到 那家 医院 明天。",
+ "请明天把备用线圈寄到医院。"],
+["The connector was loose, so the signal was weak.",
+ "那个 接头 是 松动的，所以 那个 信号 是 弱的。",
+ "接头松了，所以信号弱。"],
+["Check the voltage before you open the cover.",
+ "检查 那个 电压 在…之前 你 打开 那个 盖板。",
+ "打开盖板前先检查电压。"],
+["The alarm appears when the temperature is too high.",
+ "那个 报警 出现 当…时 那个 温度 是 太 高。",
+ "温度过高时会出现报警。"],
+["This error is caused by a dirty sensor.",
+ "这个 错误 是 被引起 由 一个 脏的 传感器。",
+ "这个故障是传感器脏了引起的。"],
+["The technician has already finished the calibration.",
+ "那个 技师 已经 完成了 那个 校准。",
+ "技师已经把校准做完了。"],
+["If the fan stops working, the system will shut down.",
+ "如果 那个 风扇 停止 工作，那个 系统 将要 关 停。",
+ "如果风扇停转，系统会自动停机。"],
+["I need the service manual for this model.",
+ "我 需要 那本 维修 手册 为了 这个 型号。",
+ "我需要这个型号的维修手册。"],
+["The customer asked us to repair the monitor today.",
+ "那个 客户 要求 我们 去 维修 那台 显示器 今天。",
+ "客户要求我们今天修好显示器。"],
+["Make sure the device is grounded before testing.",
+ "确保 那个 设备 是 接地的 在…之前 测试。",
+ "测试前先确认设备已经接地。"],
+["The image quality became worse after the last update.",
+ "那个 图像 质量 变得 更差 在…之后 那次 上一个 更新。",
+ "上次更新之后图像质量变差了。"],
+["We found a small leakage in the cooling system.",
+ "我们 发现了 一处 小的 泄漏 在…里面 那个 冷却 系统。",
+ "我们在冷却系统里发现一处小泄漏。"],
+["Do not touch the probe while the scan is running.",
+ "不要 触碰 那个 探头 当…期间 那个 扫描 正在 运行。",
+ "扫描进行中不要碰探头。"],
+["The hospital will accept the equipment next Monday.",
+ "那家 医院 将要 验收 那台 设备 下个 星期一。",
+ "医院下周一验收设备。"],
+["He replaced the fuse, but the problem still exists.",
+ "他 更换了 那个 保险丝，但是 那个 问题 仍然 存在。",
+ "他换了保险丝，可问题还在。"],
+["The system has been running normally since Friday.",
+ "那个 系统 已经 一直 运行 正常地 自从 星期五。",
+ "从周五开始系统一直运行正常。"],
+["The repair was finished before the patient arrived.",
+ "那个 维修 被 完成 在…之前 那个 病人 到达。",
+ "维修在病人到之前就做完了。"],
+["We look forward to the acceptance next week.",
+ "我们 期待 那个 验收 下 星期。",
+ "我们期待下周的验收。"],
+["Please record the fault code in the service report.",
+ "请 记录 那个 故障 代码 在…里 那份 维修 报告。",
+ "请把故障代码记在维修报告里。"]
+];
+
+/* =========================================================
+   BOOKS — 词库来源（学习记录按英文单词共享，不随词库重复）
+   ========================================================= */
+const BANKS = [
+  { id:"field", name:"现场工程词", note:"驻场维修现场用词" },
+  { id:"cet4",  name:"CET-4",     note:"精选词表，非完整大纲" },
+  { id:"cet6",  name:"CET-6",     note:"精选词表，非完整大纲" },
+  { id:"cet46", name:"CET-4 + CET-6", note:"两级合并" },
+  { id:"mine",  name:"我的词库",   note:"自己导入的词" }
+];
+function parseRaw(raw, source){
+  return raw.trim().split("\n").map(l => {
+    const p = l.split("|");
+    return { word:p[0].trim(), meaning:p[1].trim(), phonetic:p[2].trim(), example:p[3].trim(), source:source };
+  });
+}
+const BOOKS = {
+  field: WORDS.map(w => ({ word:w[0], meaning:w[1], phonetic:w[2], example:w[3], source:"现场工程词" })),
+  cet4:  parseRaw(CET4_RAW, "CET-4"),
+  cet6:  parseRaw(CET6_RAW, "CET-6")
+};
+const kw = w => (w || "").trim().toLowerCase();
+function dedup(list){
+  const seen = new Set(), out = [];
+  list.forEach(w => { const k = kw(w.word); if(k && !seen.has(k)){ seen.add(k); out.push(w); } });
+  return out;
+}
+function bankWords(id){
+  if(id === "mine")  return dedup((S.mine || []).map(w => Object.assign({ source:"我的词库" }, w)));
+  if(id === "cet46") return dedup(BOOKS.cet4.concat(BOOKS.cet6));
+  return dedup(BOOKS[id] || BOOKS.field);
+}
+function bankName(id){ const b = BANKS.find(x => x.id === id); return b ? b.name : "现场工程词"; }
+/** 单词数据结构：id / word / meaning / phonetic / example / source
+ *  successCount（正确输入次数，写错不清零）/ audioUnlocked / wrongCount */
+function record(w){
+  const k = kw(w.word), n = S.oks[k] || 0;
+  return Object.assign({ id:"w_" + k }, w, {
+    successCount: n,
+    audioUnlocked: n >= AUDIO_AT,
+    mastery: n,                     // 兼容旧导出文件
+    correctCount: n,
+    wrongCount: S.errs[k] || 0
+  });
+}
+/** 句子数据结构，和单词完全独立，两套次数互不影响 */
+function sentRecord(i){
+  const n = S.sOks[i] || 0;
+  return { id:"s_" + i, text:SENTS[i][0], literal:SENTS[i][1], natural:SENTS[i][2],
+           successCount:n, audioUnlocked:n >= AUDIO_AT, wrongCount:S.sErrs[i] || 0 };
+}
+function bankStats(id){
+  const ws = bankWords(id);
+  let m = 0, l = 0;
+  ws.forEach(w => {
+    const k = kw(w.word), n = S.oks[k] || 0;
+    if(n >= AUDIO_AT) m++;
+    else if(n > 0 || S.errs[k]) l++;
+  });
+  return { total:ws.length, unlocked:m, mastered:m, learning:l };
+}
+function totalUnlocked(){ return Object.keys(S.oks).filter(k => S.oks[k] >= AUDIO_AT).length; }
+function sentUnlocked(){ return SENTS.filter((x, i) => (S.sOks[i] || 0) >= AUDIO_AT).length; }
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const AUDIO_AT = 20;     // 同一条内容正确输入 20 次 → 解锁它自己的语音
+const DAILY = 30;        // 今日目标：完成 30 次
+const ROUND = 8;         // 一轮进入队列的生词数
+
+let S = {
+  oks:{},         // 单词 -> 正确输入次数（写错不清零，满 20 解锁该词语音）
+  errs:{},        // 单词 -> 错误次数，单独统计，不影响成功次数
+  sOks:{},        // 句子下标 -> 正确输入次数（与单词完全独立）
+  sErrs:{},       // 句子下标 -> 错误次数
+  bank:"field",   // 当前词库
+  mine:[],        // 我的词库（导入的词）
+  sound:true,
+  streak:0,       // 连续正确
+  day:"",         // 今日日期
+  today:0,        // 今日完成次数
+  sentIdx:0,
+  sentHit:0,
+  sentMiss:0,
+  last:""
+};
+
+/* =========================================================
+   STORAGE — localStorage（不可用时退回内存，保证能打开）
+   ========================================================= */
+const KEY = "engineer-english-v1";
+const mem = {};
+const LS = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return k in mem ? mem[k] : null; } },
+  set(k,v){ mem[k]=v; try{ localStorage.setItem(k,v); }catch(e){} }
+};
+function loadState(){
+  const raw = LS.get(KEY);
+  if(raw){ try{ Object.assign(S, JSON.parse(raw)); }catch(e){} }
+  if(!S.sOks) S.sOks = {};
+  if(!S.sErrs) S.sErrs = {};
+  delete S.hits; delete S.th;
+  const d = today();
+  if(S.day !== d){ S.day = d; S.today = 0; S.streak = 0; }
+}
+let saveT = null;
+function saveState(){
+  S.last = new Date().toISOString();
+  clearTimeout(saveT);
+  saveT = setTimeout(()=>LS.set(KEY, JSON.stringify(S)), 100);
+}
+function saveNow(){ clearTimeout(saveT); S.last = new Date().toISOString(); LS.set(KEY, JSON.stringify(S)); }
+function today(){
+  const n = new Date();
+  return n.getFullYear()+"-"+(n.getMonth()+1)+"-"+n.getDate();
+}
+
+/* =========================================================
+   SOUND ENGINE — Web Audio，无外部文件
+   ========================================================= */
+const Sound = {
+  ctx:null, bus:null,
+  boot(){
+    if(!S.sound) return null;
+    try{
+      if(!this.ctx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if(!AC) return null;
+        this.ctx = new AC();
+        // 统一走一个柔化的低通，去掉刺耳的高频毛刺
+        const lp = this.ctx.createBiquadFilter();
+        lp.type = "lowpass"; lp.frequency.value = 5200; lp.Q.value = 0.6;
+        const g = this.ctx.createGain(); g.gain.value = 0.9;
+        lp.connect(g); g.connect(this.ctx.destination);
+        this.bus = lp;
+      }
+      if(this.ctx.state === "suspended") this.ctx.resume();
+      return this.ctx;
+    }catch(e){ return null; }
+  },
+  /* 单个分音：快起音 + 指数衰减，像敲一下金属 */
+  partial(freq, at, dur, peak, type){
+    const c = this.ctx, t = c.currentTime + at;
+    const o = c.createOscillator(), g = c.createGain();
+    o.type = type || "triangle";
+    o.frequency.setValueAtTime(freq, t);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(peak, t + 0.006);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(this.bus);
+    o.start(t); o.stop(t + dur + 0.03);
+  },
+  /* 一颗“完成”音：基音 + 八度 + 一点钟体泛音，温暖但有金属感 */
+  hit(freq, at, dur, peak){
+    this.partial(freq,        at, dur,        peak,        "triangle");
+    this.partial(freq * 2,    at, dur * 0.72, peak * 0.30, "sine");
+    this.partial(freq * 2.76, at, dur * 0.38, peak * 0.09, "sine");
+  },
+  /**
+   * 只在整个单词写对时响一次。
+   * 连击越长音越亮，连 5 给一个收束音，连 10 再高一层，然后重新开始。
+   */
+  done(streak){
+    if(!this.boot()) return;
+    const P = 0.13;
+    if(streak > 0 && streak % 10 === 0){
+      this.hit(659.25, 0,     0.10, P);
+      this.hit(880.00, 0.085, 0.11, P);
+      this.hit(1318.5, 0.170, 0.34, P * 0.85);
+    }else if(streak > 0 && streak % 5 === 0){
+      this.hit(659.25, 0,     0.09, P);
+      this.hit(987.77, 0.075, 0.26, P * 0.9);
+    }else{
+      const step = Math.max(0, (streak - 1) % 5);      // 连击内逐级变亮
+      const base = [739.99, 783.99, 830.61, 880.00, 932.33][Math.min(step, 4)];
+      this.hit(base, 0, 0.20, P);
+    }
+  }
+};
+
+/* =========================================================
+   SPEECH — 解锁后才可用，优先 en-US
+   ========================================================= */
+const Speech = {
+  ok(){ try{ return typeof window !== "undefined" && "speechSynthesis" in window; }catch(e){ return false; } },
+  pickVoice(){
+    try{
+      const vs = window.speechSynthesis.getVoices() || [];
+      return vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+    }catch(e){ return null; }
+  },
+  say(text, rate){
+    if(!this.ok()) return false;
+    try{
+      const u = new SpeechSynthesisUtterance(text);
+      const v = this.pickVoice();
+      if(v) u.voice = v;
+      u.lang = (v && v.lang) || "en-US";
+      u.rate = rate || 0.92;
+      u.pitch = 1;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+      return true;
+    }catch(e){ return false; }
+  }
+};
+
+/* =========================================================
+   SPELL CHECK
+   ========================================================= */
+function normalize(s){ return (s||"").trim().toLowerCase(); }
+function isPerfect(typed, answer){ return normalize(typed) === normalize(answer); }
+
+/**
+ * 编辑距离对齐。答案尾部允许自由留空——还没写到的字母不算错。
+ * 返回 { marks:[每个输入字符 "ok"|"sub"|"ins"], missing:Set(被跳过的答案下标),
+ *        used:已消耗的答案长度, wrong:错误总数 }
+ */
+function analyze(rawTyped, answer){
+  const t = (rawTyped || "").toLowerCase(), a = answer.toLowerCase();
+  const n = t.length, m = a.length;
+  const D = [];
+  for(let i=0;i<=n;i++){ D.push(new Array(m+1).fill(0)); D[i][0] = i; }
+  for(let j=0;j<=m;j++) D[0][j] = j;
+  for(let i=1;i<=n;i++){
+    for(let j=1;j<=m;j++){
+      const c = t[i-1] === a[j-1] ? 0 : 1;
+      D[i][j] = Math.min(D[i-1][j-1] + c, D[i-1][j] + 1, D[i][j-1] + 1);
+    }
+  }
+  // 尾部自由留空：在最后一行里挑代价最小的列，平手时取更靠右的
+  let best = D[n][0], j = 0;
+  for(let k=1;k<=m;k++){ if(D[n][k] <= best){ best = D[n][k]; j = k; } }
+  const used = j;
+  const marks = new Array(n), missing = new Set();
+  let i = n;
+  while(i > 0 || j > 0){
+    if(i > 0 && j > 0 && D[i][j] === D[i-1][j-1] + (t[i-1] === a[j-1] ? 0 : 1)){
+      marks[i-1] = t[i-1] === a[j-1] ? "ok" : "sub"; i--; j--;
+    }else if(j > 0 && D[i][j] === D[i][j-1] + 1){
+      missing.add(j-1); j--;                      // 漏掉的答案字母
+    }else{
+      marks[i-1] = "ins"; i--;                    // 多打的字母
+    }
+  }
+  const wrong = marks.filter(x => x !== "ok").length + missing.size;
+  return { marks, missing, used, wrong };
+}
+function wrongCount(typed, answer){ return analyze(normalize(typed), answer).wrong; }
+
+/* =========================================================
+   QUEUE — 错词回队尾，未写熟的词循环出现
+   ========================================================= */
+let queue = [], cur = null, wState = "typing", errored = false;
+
+function masteredCount(){ return bankStats(S.bank).unlocked; }
+function buildQueue(){
+  const left = bankWords(S.bank).filter(w => (S.oks[kw(w.word)] || 0) < AUDIO_AT);
+  // 已经开过头的词优先做完，再放新词
+  const started = left.filter(w => S.oks[kw(w.word)] > 0);
+  const fresh   = left.filter(w => !S.oks[kw(w.word)]);
+  queue = started.concat(fresh).slice(0, ROUND);
+}
+function pushBack(word){ queue.push(word); }
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+const $ = id => document.getElementById(id);
+
+function show(name){
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("on"));
+  $("s-"+name).classList.add("on");
+}
+
+function renderHome(){
+  $("hToday").innerHTML = S.today + "<small> / " + DAILY + "</small>";
+  $("hMastered").textContent = masteredCount();
+  $("hBank").textContent = bankName(S.bank);
+  $("hSentV").textContent = sentUnlocked() + " / " + SENTS.length;
+  $("pickSound").innerHTML =
+    `<button data-snd="1" class="${S.sound?"sel":""}">开</button>` +
+    `<button data-snd="0" class="${!S.sound?"sel":""}">关</button>`;
+}
+
+const LSPACE = 0.34;   // 字距（em），答案行与输入框必须完全一致
+function fitPlate(){
+  const n = cur.word.length + 3;                 // 3 格富余，写多了也不会挤出去
+  const avail = Math.min(window.innerWidth || 360, 600) - 48;
+  // 等宽字体单字步进 ≈ 0.6em，加字距
+  let size = Math.floor(avail / (n * (0.6 + LSPACE)));
+  size = Math.max(14, Math.min(32, size));
+  $("wPlate").style.setProperty("--cw", size + "px");
+  $("wPlate").style.setProperty("--ls", LSPACE + "em");
+}
+
+function paintSay(btn, label, n){
+  const open = n >= AUDIO_AT;
+  btn.classList.toggle("locked", !open);
+  label.textContent = open ? "朗读" : "朗读 · 还差 " + (AUDIO_AT - n) + " 次";
+  return open;
+}
+function paintWordProgress(){
+  const n = S.oks[kw(cur.word)] || 0;
+  $("wProgress").textContent = "输入进度 " + Math.min(n, AUDIO_AT) + " / " + AUDIO_AT;
+  paintSay($("wSay"), $("wSayT"), n);
+}
+function renderWord(){
+  const w = cur;
+  $("wZh").textContent = w.meaning;
+  $("wIpa").textContent = w.phonetic || "";
+  $("wEg").textContent = w.example || "";
+  paintWordProgress();
+  $("wRail").style.width = Math.min(100, S.today / DAILY * 100) + "%";
+  $("wStreak").textContent = S.streak >= 2 ? "连 " + S.streak : "";
+  $("wStreak").className = "right" + (S.streak >= 5 ? " hot" : "");
+  fitPlate();
+  renderPlate();
+}
+
+/**
+ * 通用对位渲染。只负责“画”，绝不修改输入框的值或光标。
+ * 输入框文字透明，背后这层用同样的字体与字距渲染，因此逐字对齐。
+ */
+function paintPlate(ansEl, ghostEl, inputEl, answer, done){
+  const raw = inputEl.value;
+  const st  = done ? null : analyze(raw, answer);
+  ansEl.innerHTML = [...answer].map((c, i) =>
+    `<span class="cell${st && st.missing.has(i) ? " miss" : ""}">${esc(c)}</span>`).join("");
+  let html = "";
+  for(let i=0;i<raw.length;i++){
+    const m = st ? st.marks[i] : "ok";
+    const cls = m === "ins" ? "cell extra" : (m === "sub" ? "cell miss" : "cell");
+    html += `<span class="${cls}">${esc(raw[i])}</span>`;
+  }
+  if(st) for(let i=st.used;i<answer.length;i++) html += '<span class="cell slot">·</span>';
+  ghostEl.innerHTML = html;
+  return st;
+}
+function renderPlate(){
+  const st = paintPlate($("wAnswer"), $("wTyped"), $("keys"), cur.word, wState === "ok");
+  $("wStage").className = "stage" + (wState === "ok" ? " ok" : "");
+  return st;
+}
+
+function setHint(text, kind){
+  $("wHint").textContent = text;
+  $("wHint").className = "hint" + (kind ? " " + kind : "");
+}
+
+/* =========================================================
+   WORD ENGINE
+   ========================================================= */
+function startWords(){
+  buildQueue();
+  if(!queue.length){
+    $("dTitle").textContent = bankName(S.bank) + " 全部满 20 次了";
+    $("dText").textContent = "这个词库的 " + bankStats(S.bank).total + " 个词都写满 20 次、语音全部解锁，可以换一个词库或去练句子。";
+    show("done"); return;
+  }
+  show("word");
+  nextWord();
+}
+
+function nextWord(){
+  if(!queue.length){
+    $("dTitle").textContent = "这一轮写完了";
+    $("dText").textContent = "今日完成 " + S.today + " 次，" + bankName(S.bank) + " 已解锁语音 " + masteredCount() + " 个词。";
+    show("done"); renderHome(); return;
+  }
+  cur = queue[0];
+  wState = "typing";
+  errored = false;
+  $("keys").value = "";
+  renderWord();
+  setHint("照着上面写一遍");
+  setTimeout(()=>$("keys").focus(), 30);
+}
+
+/**
+ * 输入框每次变化都走这里。只读值、只重画，不写回 value、不动 selection。
+ */
+function onInput(){
+  if(wState === "ok") return;
+  const ans = cur.word, raw = $("keys").value;
+  if(isPerfect(raw, ans)){ complete(); return; }
+  const st = renderPlate();
+  // 写满长度还不对，才算这一次写错（只记一次，之后随便改）
+  if(!errored && normalize(raw).length >= ans.length && st.wrong > 0){ commitError(); return; }
+  if(errored){
+    setHint(st.wrong ? "还有 " + st.wrong + " 个字母对不上" : "继续写完", st.wrong ? "warn" : null);
+  }else{
+    setHint(st.wrong ? "标红的字母对不上" : "照着上面写一遍", st.wrong ? "warn" : null);
+  }
+}
+
+/** 记一次写错：只单独计数，绝不减少已经拿到的成功次数。不清空输入，不播成功音。 */
+function commitError(){
+  errored = true;
+  wState = "error";
+  const w = kw(cur.word);
+  S.errs[w] = (S.errs[w] || 0) + 1;
+  S.streak = 0;
+  saveState();
+  renderPlate();
+  $("wStreak").textContent = "";
+  $("wStreak").className = "right";
+  setHint("标红的字母对不上，自己改过来", "warn");
+  if(queue[0] === cur){ queue.shift(); pushBack(cur); }
+}
+
+function complete(){
+  const w = kw(cur.word);
+  wState = "ok";
+  S.oks[w] = (S.oks[w] || 0) + 1;      // 只有完整正确这一次才 +1
+  S.streak += 1;
+  S.today += 1;
+  const n = S.oks[w];
+  const at = queue.indexOf(cur);
+  if(at > -1) queue.splice(at, 1);
+  if(n < AUDIO_AT) pushBack(cur);      // 没满 20 就回队尾接着练
+  saveNow();
+  Sound.done(S.streak);
+  renderPlate();
+  paintWordProgress();
+  $("wStreak").textContent = S.streak >= 2 ? "连 " + S.streak : "";
+  $("wStreak").className = "right" + (S.streak >= 5 ? " hot" : "");
+  setHint(n === AUDIO_AT ? "满 20 次，这个词的语音解锁了" : "对了", "good");
+  setTimeout(()=>{ if(wState === "ok") nextWord(); }, n === AUDIO_AT ? 1100 : 620);
+}
+
+/* =========================================================
+   IMPORT / EXPORT — 自定义词库与学习数据备份
+   ========================================================= */
+const HEADS = {
+  word:"word", 英文:"word", 单词:"word",
+  meaning:"meaning", 中文:"meaning", 释义:"meaning", 翻译:"meaning",
+  phonetic:"phonetic", 音标:"phonetic", 发音:"phonetic",
+  example:"example", 例句:"example", 例子:"example",
+  source:"source", 来源:"source", 词库:"source",
+  successcount:"successCount", 成功次数:"successCount",
+  mastery:"mastery", 写熟度:"mastery",
+  correctcount:"correctCount", 正确次数:"correctCount",
+  wrongcount:"wrongCount", 错误次数:"wrongCount"
+};
+function splitCSV(line){
+  const out = []; let cell = "", q = false;
+  for(let i=0;i<line.length;i++){
+    const c = line[i];
+    if(q){
+      if(c === '"' && line[i+1] === '"'){ cell += '"'; i++; }
+      else if(c === '"') q = false;
+      else cell += c;
+    }else if(c === '"') q = true;
+    else if(c === ","){ out.push(cell); cell = ""; }
+    else cell += c;
+  }
+  out.push(cell);
+  return out.map(s => s.trim());
+}
+function splitLine(line){
+  if(line.indexOf("|") > -1) return line.split("|").map(s => s.trim());
+  if(line.indexOf("\t") > -1) return line.split("\t").map(s => s.trim());
+  return splitCSV(line);
+}
+/** 解析 CSV / TXT，返回 {items, skipped, hasProgress} */
+function parseImport(text){
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l && l[0] !== "#");
+  if(!lines.length) return { items:[], skipped:0, hasProgress:false };
+  let map = ["word","meaning","phonetic","example"];
+  const first = splitLine(lines[0]).map(s => s.toLowerCase());
+  const looksHeader = first.some(c => HEADS[c] === "word") && first.some(c => HEADS[c] === "meaning");
+  if(looksHeader){ map = first.map(c => HEADS[c] || null); lines.shift(); }
+  const hasProgress = map.indexOf("successCount") > -1 || map.indexOf("mastery") > -1 || map.indexOf("correctCount") > -1;
+  const items = []; let skipped = 0;
+  lines.forEach(l => {
+    const p = splitLine(l), o = {};
+    map.forEach((f, i) => { if(f && p[i] !== undefined) o[f] = p[i]; });
+    o.word = (o.word || "").replace(/^["']|["']$/g, "").trim();
+    o.meaning = (o.meaning || "").trim();
+    if(!/^[A-Za-z][A-Za-z' .-]*$/.test(o.word) || !o.meaning){ skipped++; return; }
+    items.push({
+      word:o.word, meaning:o.meaning,
+      phonetic:(o.phonetic || "").trim(), example:(o.example || "").trim(),
+      successCount:+o.successCount || 0, mastery:+o.mastery || 0,
+      correctCount:+o.correctCount || 0, wrongCount:+o.wrongCount || 0
+    });
+  });
+  return { items:dedup(items), skipped, hasProgress };
+}
+
+let pending = null;   // 待确认的导入
+function known(k){ return !!(BOOKS.field.concat(BOOKS.cet4, BOOKS.cet6).some(w => kw(w.word) === k)); }
+function showPreview(res){
+  pending = res;
+  const mineKeys = new Set((S.mine || []).map(w => kw(w.word)));
+  let add = 0, dup = 0, withRec = 0;
+  res.items.forEach(it => {
+    const k = kw(it.word);
+    if(mineKeys.has(k)) dup++; else add++;
+    if(S.oks[k]) withRec++;
+  });
+  pending.add = add; pending.dup = dup;
+  $("impSum").innerHTML =
+    "<b>" + res.items.length + "</b> 个单词<br>新增 " + add + "　重复 " + dup +
+    "<i>" + (withRec ? "其中 " + withRec + " 个已有学习记录，会原样保留。" : "重复的词保留原来的学习记录。") +
+    (res.skipped ? " 跳过 " + res.skipped + " 行无法识别的内容。" : "") +
+    (res.hasProgress ? " 文件含学习记录，导入时一并恢复。" : "") + "</i>";
+  $("impTable").innerHTML = res.items.slice(0, 40).map(it => {
+    const d = mineKeys.has(kw(it.word)) || known(kw(it.word));
+    return `<div class="improw${d ? " dup" : ""}"><span class="w">${esc(it.word)}</span><span class="m">${esc(it.meaning)}</span></div>`;
+  }).join("") + (res.items.length > 40 ? `<div class="improw"><span class="m">…… 其余 ${res.items.length - 40} 个</span></div>` : "");
+  show("import");
+}
+function esc(s){ return String(s).replace(/[&<>]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;" }[c])); }
+
+function applyImport(mode){
+  if(!pending) return;
+  const base = mode === "replace" ? [] : (S.mine || []).slice();
+  const seen = new Map(base.map((w, i) => [kw(w.word), i]));
+  pending.items.forEach(it => {
+    const k = kw(it.word);
+    if(seen.has(k)){                       // 重复词不新建，只补全空字段
+      const t = base[seen.get(k)];
+      if(!t.phonetic && it.phonetic) t.phonetic = it.phonetic;
+      if(!t.example && it.example) t.example = it.example;
+    }else{
+      seen.set(k, base.length);
+      base.push({ word:it.word, meaning:it.meaning, phonetic:it.phonetic, example:it.example });
+    }
+    if(pending.hasProgress){               // 只补更高的记录，不覆盖更好的成绩
+      const got = Math.max(it.successCount || 0, it.correctCount || 0, it.mastery || 0);
+      if(got > (S.oks[k] || 0)) S.oks[k] = got;
+      if(it.wrongCount > (S.errs[k] || 0)) S.errs[k] = it.wrongCount;
+    }
+  });
+  S.mine = base;
+  S.bank = "mine";
+  pending = null;
+  saveNow();
+  renderLib();
+  show("lib");
+}
+
+function exportCSV(){
+  const rows = [["word","meaning","phonetic","example","source","successCount","mastery","correctCount","wrongCount"]];
+  const out = new Map();
+  bankWords("mine").forEach(w => out.set(kw(w.word), w));
+  // 任何有学习记录的词也一起带走，换手机后记录不丢
+  ["field","cet4","cet6"].forEach(id => bankWords(id).forEach(w => {
+    const k = kw(w.word);
+    if(!out.has(k) && (S.oks[k] || S.errs[k])) out.set(k, w);
+  }));
+  out.forEach(w => {
+    const r = record(w);
+    rows.push([r.word, r.meaning, r.phonetic, r.example, r.source || "我的词库", r.successCount, r.mastery, r.correctCount, r.wrongCount]);
+  });
+  const csv = rows.map(r => r.map(c => {
+    const s = String(c == null ? "" : c);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }).join(",")).join("\n");
+  download("engineer-english-" + today() + ".csv", csv);
+  return csv;
+}
+function download(name, text){
+  try{
+    const blob = new Blob(["\ufeff" + text], { type:"text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    return true;
+  }catch(e){ return false; }
+}
+
+function renderLib(){
+  $("libList").innerHTML = BANKS.map(b => {
+    const st = bankStats(b.id);
+    const empty = b.id === "mine" && !st.total;
+    return `<button class="bank${b.id===S.bank?" cur":""}" data-bank="${b.id}">
+      <span class="nm">${b.name}<i>${empty ? "还没有导入" : b.note}</i></span>
+      <span class="num">${st.total} 词<br><em>已解锁 ${st.unlocked}</em> · 学习中 ${st.learning}</span>
+    </button>`;
+  }).join("");
+}
+
+/* =========================================================
+   SENTENCE ENGINE
+   每个句子单独计数：中文理解被判定为正确 20 次 → 解锁这个句子的朗读。
+   英文只是理解材料，不需要照抄；单词的次数与句子完全无关。
+   ========================================================= */
+let sIdx = 0;
+
+function startSents(){
+  sIdx = S.sentIdx % SENTS.length;
+  openUnderstand();
+}
+function openUnderstand(){
+  show("sent");
+  renderSent();
+}
+function renderSent(){
+  const s0 = SENTS[sIdx], r = sentRecord(sIdx);
+  $("sEn").textContent = s0[0];
+  $("sLit").innerHTML = s0[1].split(" ").map(t => `<b>${esc(t)}</b>`).join("");
+  $("sNat").textContent = s0[2];
+  $("sInput").value = "";
+  $("sReveal").classList.remove("on");
+  $("sActs").style.display = "";
+  $("sJudge").style.display = "none";
+  paintSay($("sSay"), $("sSayT"), r.successCount);
+  $("sProgress").textContent = "理解 " + Math.min(r.successCount, AUDIO_AT) + " / " + AUDIO_AT;
+  $("sCount").textContent = (sIdx + 1) + "/" + SENTS.length;
+  $("sRail").style.width = ((sIdx + 1) / SENTS.length * 100) + "%";
+  $("sBody").scrollTop = 0;
+}
+function submitSent(){
+  const v = $("sInput").value.trim();
+  if(!v){ $("sInput").focus(); return; }
+  $("sMine").textContent = v;
+  $("sReveal").classList.add("on");
+  $("sActs").style.display = "none";
+  $("sJudge").style.display = "flex";
+  $("sInput").blur();
+}
+/** 只有“理解对了”才 +1；“还差点意思”单独计错，不减已有次数 */
+function judgeSent(hit){
+  const r0 = S.sOks[sIdx] || 0;
+  if(hit){
+    S.sentHit++;
+    S.sOks[sIdx] = r0 + 1;
+    S.streak += 1;
+    Sound.boot();
+    Sound.done(S.streak);          // 一次完整训练正确，响一次
+  }else{
+    S.sentMiss++;
+    S.sErrs[sIdx] = (S.sErrs[sIdx] || 0) + 1;
+    S.streak = 0;
+  }
+  const unlockedNow = hit && S.sOks[sIdx] === AUDIO_AT;
+  sIdx = (sIdx + 1) % SENTS.length;   // 逐句轮换，不把次数堆在一句上
+  S.sentIdx = sIdx;
+  saveNow();
+  setTimeout(openUnderstand, unlockedNow ? 900 : (hit ? 420 : 0));
+  if(unlockedNow) $("sProgress").textContent = "满 20 次，这句的朗读解锁了";
+}
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+document.querySelectorAll("[data-home]").forEach(b =>
+  b.addEventListener("click", ()=>{ saveNow(); show("home"); renderHome(); }));
+
+$("hStart").addEventListener("click", ()=>{ Sound.boot(); startWords(); });
+$("hSent").addEventListener("click", startSents);
+$("hBankRow").addEventListener("click", ()=>{ renderLib(); show("lib"); });
+
+$("libList").addEventListener("click", e=>{
+  const b = e.target.closest("[data-bank]"); if(!b) return;
+  const id = b.dataset.bank;
+  if(!bankWords(id).length){ return; }          // 空词库不给切过去
+  S.bank = id; saveNow(); renderLib(); renderHome();
+});
+$("btnImport").addEventListener("click", ()=>$("fileIn").click());
+$("fileIn").addEventListener("change", e=>{
+  const f = e.target.files && e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ()=>{
+    const res = parseImport(String(r.result || ""));
+    if(!res.items.length){
+      $("impSum").innerHTML = "<b>0</b> 个单词<i>这个文件里没有认出可用的词。每行需要至少有英文和中文，例如 equipment|设备。</i>";
+      $("impTable").innerHTML = ""; pending = null; show("import"); return;
+    }
+    showPreview(res);
+  };
+  r.readAsText(f, "utf-8");
+  e.target.value = "";
+});
+$("impAppend").addEventListener("click", ()=>applyImport("append"));
+$("impReplace").addEventListener("click", ()=>applyImport("replace"));
+$("impCancel").addEventListener("click", ()=>{ pending = null; renderLib(); show("lib"); });
+$("btnExport").addEventListener("click", exportCSV);
+
+$("pickSound").addEventListener("click", e=>{
+  const b = e.target.closest("[data-snd]"); if(!b) return;
+  S.sound = b.dataset.snd === "1"; saveNow(); renderHome();
+  if(S.sound) Sound.boot();
+});
+
+$("keys").addEventListener("input", onInput);
+$("keys").addEventListener("keydown", e=>{
+  if(e.key === "Enter"){ e.preventDefault(); confirmWord(); }
+});
+$("wPlate").addEventListener("click", e=>{ if(e.target !== $("keys")) $("keys").focus(); });
+$("wConfirm").addEventListener("click", confirmWord);
+
+function confirmWord(){
+  if(wState === "ok"){ nextWord(); return; }
+  Sound.boot();
+  if(isPerfect($("keys").value, cur.word)) complete();
+  else if(!errored) commitError();
+  else { renderPlate(); setHint("还有 " + wrongCount($("keys").value, cur.word) + " 个字母对不上", "warn"); }
+}
+
+$("wSay").addEventListener("click", ()=>{
+  if((S.oks[kw(cur.word)] || 0) >= AUDIO_AT) Speech.say(cur.word, 0.85);
+});
+$("sSay").addEventListener("click", ()=>{
+  if((S.sOks[sIdx] || 0) >= AUDIO_AT) Speech.say(SENTS[sIdx][0]);
+});
+$("sSubmit").addEventListener("click", submitSent);
+$("sHit").addEventListener("click", ()=>judgeSent(true));
+$("sMiss").addEventListener("click", ()=>judgeSent(false));
+
+window.addEventListener("resize", ()=>{
+  if(cur && $("s-word").classList.contains("on")){ fitPlate(); renderPlate(); }
+});
+window.addEventListener("pagehide", saveNow);
+document.addEventListener("visibilitychange", ()=>{ if(document.hidden) saveNow(); });
+
+/* 供自测使用 */
+window.__app = { get S(){return S;}, get queue(){return queue;}, get cur(){return cur;},
+  get wState(){return wState;}, get pending(){return pending;},
+  get sIdx(){return sIdx;},
+  analyze, wrongCount, isPerfect, renderPlate, onInput, startSents, openUnderstand, judgeSent,
+  masteredCount, totalUnlocked, sentUnlocked, bankStats, bankWords, record, sentRecord, Speech,
+  parseImport, showPreview, applyImport, exportCSV, renderLib, renderHome,
+  confirmWord, WORDS, SENTS, BOOKS, BANKS };
+
+/* 放到网站上时注册离线缓存；直接用 file:// 打开则静默跳过 */
+if("serviceWorker" in navigator && location.protocol.indexOf("http") === 0){
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+}
+
+loadState();
+if(!bankWords(S.bank).length) S.bank = "field";
+renderHome();
+</script>
+</body>
+</html>
